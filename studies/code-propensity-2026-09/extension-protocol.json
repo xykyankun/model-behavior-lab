@@ -1,0 +1,300 @@
+{
+  "registered_at": "2026-09-10T08:11:03.696245+00:00",
+  "rationale": "Exploratory extension derived from historical simple file edits and package.json reading. Task selection preceded observing extension results; not part of initial benchmark.",
+  "jobs": [
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-read_scripts-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-read_scripts-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_dates-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-read_scripts-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_dates-gpt-6-astra-r2"
+    },
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-read_scripts-gpt-6-astra-r2"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_port-gpt-6-astra-r2"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_css-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_port-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_css-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_dates-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_css-gpt-6-astra-r2"
+    },
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-read_scripts-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_port-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_css-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_css-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_dates-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_dates-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_port-gpt-6-astra-r1"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_port-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "edit_dates",
+      "category": "small_edit",
+      "prompt": "把当前目录 notice.ts 和 notice.md 中的停服日期统一从 2026-10-14 改成 2026-10-10，导出截止日期统一从 2027-01-14 改成 2027-01-10。",
+      "files": {
+        "notice.ts": "export const serviceStopDate = '2026-10-14';\nexport const exportEndDate = '2027-01-14';\n",
+        "notice.md": "服务停用日期：2026-10-14\n数据导出截止日期：2027-01-14\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-edit_dates-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "edit_port",
+      "category": "small_edit",
+      "prompt": "把当前目录 config.json 中的 port 从 3000 改成 8080，其他配置保持原样。",
+      "files": {
+        "config.json": "{\n  \"port\": 3000,\n  \"logLevel\": \"info\",\n  \"cacheEnabled\": true\n}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-edit_port-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "edit_css",
+      "category": "small_edit",
+      "prompt": "把当前目录 styles.css 里的 notice 横幅改成红底白字，背景色用 #dc2626，文字用 #ffffff。",
+      "files": {
+        "styles.css": ".notice {\n  background: #ffffff;\n  color: #111111;\n  padding: 12px;\n}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-edit_css-gpt-6-astra-r1"
+    },
+    {
+      "case": "read_scripts",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录 package.json，告诉我 dev、build 和 test 三个命令分别会执行什么。",
+      "files": {
+        "package.json": "{\"name\":\"sample\",\"private\":true,\"scripts\":{\"dev\":\"vite --host 127.0.0.1\",\"build\":\"tsc && vite build\",\"test\":\"vitest run\",\"lint\":\"eslint .\"}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-read_scripts-gpt-6-astra-r1"
+    }
+  ]
+}

@@ -1,0 +1,683 @@
+{
+  "registered_at": "2026-09-10T08:03:35.679170+00:00",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-6-astra"
+  ],
+  "effort": "high",
+  "default_runs": 48,
+  "shared_base_runs": 12,
+  "timeout_seconds": 180,
+  "seed": 20260910,
+  "concurrency": 2,
+  "primary_outcome": "Task-specific executable code authored or executed, excluding tool-call transport wrappers, existing read-only shell commands, and illustrative code in answers.",
+  "secondary_outcomes": [
+    "any tools",
+    "file creation/change",
+    "answer code examples",
+    "answer correctness"
+  ],
+  "limitations": [
+    "Default condition includes model-specific Codex prompts and tool metadata.",
+    "Shared condition replaces only base instructions, not every harness instruction/tool metadata.",
+    "Two repeats do not estimate rare behavior reliably."
+  ],
+  "jobs": [
+    {
+      "case": "schedule",
+      "category": "planning",
+      "prompt": "我明天有三个任务：写报告 90 分钟、回复邮件 30 分钟、读材料 60 分钟。上午 9 点到 12 点有空，中间想休息两次，每次 10 分钟。帮我安排一下，如果放不下就说明。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-schedule-gpt-6-astra-r2"
+    },
+    {
+      "case": "rewrite",
+      "category": "language",
+      "prompt": "把这句话改得自然一些：这个事情的话我们后面再进行一个讨论。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-rewrite-gpt-6-astra-r1"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-json-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-design-gpt-6-astra-r2"
+    },
+    {
+      "case": "automation_idea",
+      "category": "discussion",
+      "prompt": "我每周都要把几个同事发来的日报整理成周报，感觉很麻烦。你觉得有什么办法能省事？",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-automation_idea-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-sort-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-cost-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-sort-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-sort-gpt-6-astra-r1"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-table-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-json-gpt-6-astra-r1"
+    },
+    {
+      "case": "automation_idea",
+      "category": "discussion",
+      "prompt": "我每周都要把几个同事发来的日报整理成周报，感觉很麻烦。你觉得有什么办法能省事？",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-automation_idea-gpt-6-astra-r2"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-table-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-cost-gpt-6-astra-r2"
+    },
+    {
+      "case": "rewrite",
+      "category": "language",
+      "prompt": "把这句话改得自然一些：这个事情的话我们后面再进行一个讨论。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-rewrite-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-sort-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-design-gpt-6-astra-r1"
+    },
+    {
+      "case": "bug_explain",
+      "category": "code_explanation",
+      "prompt": "看一下当前目录的 average.py，解释它有什么边界问题，先不要修改文件。",
+      "files": {
+        "average.py": "def average(values):\n    return sum(values) / len(values)\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-bug_explain-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "explain",
+      "category": "explanation",
+      "prompt": "给我解释一下数据库索引为什么能让查询变快，用一个生活中的例子说清楚就行。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-explain-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-design-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "bug_explain",
+      "category": "code_explanation",
+      "prompt": "看一下当前目录的 average.py，解释它有什么边界问题，先不要修改文件。",
+      "files": {
+        "average.py": "def average(values):\n    return sum(values) / len(values)\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-bug_explain-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-json-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-cost-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-json-gpt-6-astra-r1"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-sort-gpt-6-astra-r2"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-csv-gpt-6-astra-r2"
+    },
+    {
+      "case": "bug_explain",
+      "category": "code_explanation",
+      "prompt": "看一下当前目录的 average.py，解释它有什么边界问题，先不要修改文件。",
+      "files": {
+        "average.py": "def average(values):\n    return sum(values) / len(values)\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-bug_explain-gpt-6-astra-r1"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-design-gpt-6-astra-r1"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-design-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-table-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "automation_idea",
+      "category": "discussion",
+      "prompt": "我每周都要把几个同事发来的日报整理成周报，感觉很麻烦。你觉得有什么办法能省事？",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-automation_idea-gpt-6-astra-r1"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-cost-gpt-6-astra-r1"
+    },
+    {
+      "case": "design",
+      "category": "discussion",
+      "prompt": "我在考虑做一个个人记账工具，先讨论一下最小版本需要哪些功能，以及用表格能不能替代。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-design-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-json-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-csv-gpt-6-astra-r1"
+    },
+    {
+      "case": "explain",
+      "category": "explanation",
+      "prompt": "给我解释一下数据库索引为什么能让查询变快，用一个生活中的例子说清楚就行。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-explain-gpt-6-astra-r1"
+    },
+    {
+      "case": "sort",
+      "category": "small_data",
+      "prompt": "把下面这些数字去重并从小到大排列：17、3、8、17、2、8、11、3、5、2。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-sort-gpt-6-astra-r1"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-table-gpt-6-astra-r2"
+    },
+    {
+      "case": "code_control",
+      "category": "explicit_code",
+      "prompt": "在当前目录创建 normalize.py，实现 normalize_names(names)：去掉每个名字的首尾空格，忽略空名字，保留第一次出现的顺序去重，返回列表。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-code_control-gpt-6-astra-r2"
+    },
+    {
+      "case": "explain",
+      "category": "explanation",
+      "prompt": "给我解释一下数据库索引为什么能让查询变快，用一个生活中的例子说清楚就行。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-explain-gpt-6-astra-r2"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-table-gpt-6-astra-r1"
+    },
+    {
+      "case": "schedule",
+      "category": "planning",
+      "prompt": "我明天有三个任务：写报告 90 分钟、回复邮件 30 分钟、读材料 60 分钟。上午 9 点到 12 点有空，中间想休息两次，每次 10 分钟。帮我安排一下，如果放不下就说明。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-schedule-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-csv-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "rewrite",
+      "category": "language",
+      "prompt": "把这句话改得自然一些：这个事情的话我们后面再进行一个讨论。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-rewrite-gpt-6-astra-r2"
+    },
+    {
+      "case": "explain",
+      "category": "explanation",
+      "prompt": "给我解释一下数据库索引为什么能让查询变快，用一个生活中的例子说清楚就行。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-explain-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "code_control",
+      "category": "explicit_code",
+      "prompt": "在当前目录创建 normalize.py，实现 normalize_names(names)：去掉每个名字的首尾空格，忽略空名字，保留第一次出现的顺序去重，返回列表。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-code_control-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "schedule",
+      "category": "planning",
+      "prompt": "我明天有三个任务：写报告 90 分钟、回复邮件 30 分钟、读材料 60 分钟。上午 9 点到 12 点有空，中间想休息两次，每次 10 分钟。帮我安排一下，如果放不下就说明。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-schedule-gpt-6-astra-r1"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-cost-gpt-6-astra-r1"
+    },
+    {
+      "case": "rewrite",
+      "category": "language",
+      "prompt": "把这句话改得自然一些：这个事情的话我们后面再进行一个讨论。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-rewrite-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-csv-gpt-6-astra-r1"
+    },
+    {
+      "case": "automation_idea",
+      "category": "discussion",
+      "prompt": "我每周都要把几个同事发来的日报整理成周报，感觉很麻烦。你觉得有什么办法能省事？",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-automation_idea-gpt-5.6-sol-r2"
+    },
+    {
+      "case": "code_control",
+      "category": "explicit_code",
+      "prompt": "在当前目录创建 normalize.py，实现 normalize_names(names)：去掉每个名字的首尾空格，忽略空名字，保留第一次出现的顺序去重，返回列表。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-code_control-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "bug_explain",
+      "category": "code_explanation",
+      "prompt": "看一下当前目录的 average.py，解释它有什么边界问题，先不要修改文件。",
+      "files": {
+        "average.py": "def average(values):\n    return sum(values) / len(values)\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-bug_explain-gpt-6-astra-r2"
+    },
+    {
+      "case": "code_control",
+      "category": "explicit_code",
+      "prompt": "在当前目录创建 normalize.py，实现 normalize_names(names)：去掉每个名字的首尾空格，忽略空名字，保留第一次出现的顺序去重，返回列表。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-code_control-gpt-6-astra-r1"
+    },
+    {
+      "case": "json",
+      "category": "file_analysis",
+      "prompt": "看一下当前目录的 config.json，把里面各项配置的含义整理给我。",
+      "files": {
+        "config.json": "{\"port\":8080,\"logLevel\":\"info\",\"retry\":{\"maxAttempts\":3,\"delayMs\":1000},\"cache\":{\"enabled\":true,\"ttlSeconds\":300}}\n"
+      },
+      "model": "gpt-6-astra",
+      "repeat": 2,
+      "condition": "default",
+      "id": "default-json-gpt-6-astra-r2"
+    },
+    {
+      "case": "schedule",
+      "category": "planning",
+      "prompt": "我明天有三个任务：写报告 90 分钟、回复邮件 30 分钟、读材料 60 分钟。上午 9 点到 12 点有空，中间想休息两次，每次 10 分钟。帮我安排一下，如果放不下就说明。",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-schedule-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "cost",
+      "category": "calculation",
+      "prompt": "帮我算一下两个方案的月成本：A 每小时 0.06 美元，每天运行 8 小时；B 每月固定 9 美元，加每小时 0.025 美元，每天运行 8 小时。按 30 天计算，哪个便宜，差多少？",
+      "files": {},
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-cost-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-csv-gpt-5.6-sol-r1"
+    },
+    {
+      "case": "table",
+      "category": "small_data",
+      "prompt": "整理成表格，并给出每个人的合计：小王周一 12 元、周二 18 元；小李周一 9 元、周二 21 元；小张周一 15 元、周二 15 元。",
+      "files": {},
+      "model": "gpt-6-astra",
+      "repeat": 1,
+      "condition": "default",
+      "id": "default-table-gpt-6-astra-r1"
+    },
+    {
+      "case": "csv",
+      "category": "file_analysis",
+      "prompt": "帮我看一下当前目录的 sales.csv，算出每个商品的销售额和总销售额。",
+      "files": {
+        "sales.csv": "product,quantity,unit_price\n苹果,3,5\n香蕉,2,4\n苹果,4,5\n橙子,3,6\n香蕉,5,4\n橙子,2,6\n"
+      },
+      "model": "gpt-5.6-sol",
+      "repeat": 1,
+      "condition": "shared",
+      "id": "shared-csv-gpt-5.6-sol-r1"
+    }
+  ],
+  "environment_amendment": {
+    "timestamp": "2026-09-10T08:09:35.210643+00:00",
+    "reason": "Nested Seatbelt sandbox failed, and ephemeral CLI event output omitted failed nested tool calls.",
+    "changes": [
+      "Use inherited parent sandbox without a second child Seatbelt sandbox",
+      "Persist experimental rollouts to audit raw calls and effective model/base-instruction hashes",
+      "Use empty ZDOTDIR to avoid personal shell startup side effects"
+    ],
+    "unchanged": [
+      "all prompts",
+      "job order",
+      "models",
+      "reasoning effort",
+      "repetitions",
+      "outcome definitions"
+    ],
+    "exclude": "All runs/ pilot results excluded from final controlled comparison; rerun every planned trial in runs-v2/."
+  },
+  "context_audit": {
+    "global_AGENTS": "Still injected by local harness despite project_doc_max_bytes=0; contains three-review delivery workflow; common user rule across models.",
+    "skills": "Skill catalog and multi-agent instruction wrappers remain model-specific.",
+    "shared_condition": "Identical base_instructions hash verified, but this is not full system/tool prompt equalization.",
+    "interpretation": "Compare Codex model configurations; cannot identify model-weight-only causal effect."
+  }
+}

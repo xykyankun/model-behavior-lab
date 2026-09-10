@@ -1,0 +1,134 @@
+{
+  "definition": "Turn contains an explicit Python/Node/Ruby/Perl inline program (-c/-e/-p/eval/print/heredoc). Excludes existing scripts/CLIs, ordinary shell commands, pure JS tool orchestration, and code examples in answers. This is a narrow reproducible proxy, not a count of all programming.",
+  "source": "Read-only state_5.sqlite, thread_history_1.sqlite, and original rollout tool inputs. Human root cli/vscode sessions only; current investigation, exec runs and subagents excluded. Model is from per-turn turn_context, not thread latest model.",
+  "total_target_turns": 1916,
+  "completed_target_turns": 1633,
+  "excluded_statuses": {
+    "interrupted": 269,
+    "inProgress": 7,
+    "failed": 7
+  },
+  "scopes": {
+    "all": {
+      "gpt-5.6-sol": {
+        "turns": 1500,
+        "threads": 157,
+        "script_turns": 181,
+        "script_rate": 0.12066666666666667,
+        "broad_code_turns": 241,
+        "broad_code_rate": 0.16066666666666668,
+        "wrapper_turns": 1090
+      },
+      "gpt-6-astra": {
+        "turns": 133,
+        "threads": 24,
+        "script_turns": 50,
+        "script_rate": 0.37593984962406013,
+        "broad_code_turns": 50,
+        "broad_code_rate": 0.37593984962406013,
+        "wrapper_turns": 106
+      }
+    },
+    "since_sep1": {
+      "gpt-5.6-sol": {
+        "turns": 245,
+        "threads": 18,
+        "script_turns": 26,
+        "script_rate": 0.10612244897959183,
+        "broad_code_turns": 42,
+        "broad_code_rate": 0.17142857142857143,
+        "wrapper_turns": 210
+      },
+      "gpt-6-astra": {
+        "turns": 133,
+        "threads": 24,
+        "script_turns": 50,
+        "script_rate": 0.37593984962406013,
+        "broad_code_turns": 50,
+        "broad_code_rate": 0.37593984962406013,
+        "wrapper_turns": 106
+      }
+    },
+    "since_sep7": {
+      "gpt-5.6-sol": {
+        "turns": 20,
+        "threads": 3,
+        "script_turns": 0,
+        "script_rate": 0.0,
+        "broad_code_turns": 0,
+        "broad_code_rate": 0.0,
+        "wrapper_turns": 20
+      },
+      "gpt-6-astra": {
+        "turns": 133,
+        "threads": 24,
+        "script_turns": 50,
+        "script_rate": 0.37593984962406013,
+        "broad_code_turns": 50,
+        "broad_code_rate": 0.37593984962406013,
+        "wrapper_turns": 106
+      }
+    },
+    "projectless": {
+      "gpt-5.6-sol": {
+        "turns": 25,
+        "threads": 5,
+        "script_turns": 1,
+        "script_rate": 0.04,
+        "broad_code_turns": 4,
+        "broad_code_rate": 0.16,
+        "wrapper_turns": 20
+      },
+      "gpt-6-astra": {
+        "turns": 22,
+        "threads": 7,
+        "script_turns": 1,
+        "script_rate": 0.045454545454545456,
+        "broad_code_turns": 1,
+        "broad_code_rate": 0.045454545454545456,
+        "wrapper_turns": 15
+      }
+    },
+    "first_turn": {
+      "gpt-5.6-sol": {
+        "turns": 133,
+        "threads": 133,
+        "script_turns": 17,
+        "script_rate": 0.12781954887218044,
+        "broad_code_turns": 29,
+        "broad_code_rate": 0.21804511278195488,
+        "wrapper_turns": 110
+      },
+      "gpt-6-astra": {
+        "turns": 17,
+        "threads": 17,
+        "script_turns": 2,
+        "script_rate": 0.11764705882352941,
+        "broad_code_turns": 2,
+        "broad_code_rate": 0.11764705882352941,
+        "wrapper_turns": 13
+      }
+    },
+    "mixed_threads": {
+      "gpt-5.6-sol": {
+        "turns": 233,
+        "threads": 7,
+        "script_turns": 39,
+        "script_rate": 0.16738197424892703,
+        "broad_code_turns": 57,
+        "broad_code_rate": 0.2446351931330472,
+        "wrapper_turns": 186
+      },
+      "gpt-6-astra": {
+        "turns": 53,
+        "threads": 7,
+        "script_turns": 19,
+        "script_rate": 0.3584905660377358,
+        "broad_code_turns": 19,
+        "broad_code_rate": 0.3584905660377358,
+        "wrapper_turns": 48
+      }
+    }
+  },
+  "mixed_thread_count": 7
+}

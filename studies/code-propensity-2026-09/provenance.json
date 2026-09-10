@@ -1,0 +1,21 @@
+{
+  "study": "exploratory single-user Codex configuration comparison",
+  "collection_date": "2026-09-10",
+  "cli_version": "0.153.4",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-6-astra"
+  ],
+  "effort": "high",
+  "formal_valid_trials": 84,
+  "excluded_completed_pilot_trials": 29,
+  "excluded_cancelled_pilot_jobs": 31,
+  "initial_formal_trials": 60,
+  "exploratory_extension_trials": 24,
+  "source_logs_private": true,
+  "public_transform": "Field allowlist; only synthetic trial tool inputs and final answers; home/workspace paths and session identifiers replaced. No historical transcript, raw system/developer text, token, certificate or tool output exported.",
+  "base_hash_note": "Legacy base hashes use SHA256(json.dumps(base_instructions, sort_keys=True).encode()); new runner canonical hashes use compact UTF8 JSON, so hash schemes differ.",
+  "conditions": "Shared replaces only base instructions. Skills/global instructions/tool metadata remain a confound.",
+  "judging": "Regex candidate labels audited by the same investigating assistant; not independent human annotation and not blinded.",
+  "dates_note": "Registration timestamps are local metadata, not independently timestamped preregistrations."
+}
