@@ -1,0 +1,10 @@
+{
+  "protocol.json": "885a135cd342208b32d5ef944cb2862e39f37bf088f0c578f59cf79e8e51a7de",
+  "main-protocol.json": "7dde0540838166bc6fae9e6584e4d4dc9c10db2ac93034f77bac1bc41ca38046",
+  "pilot-trials.json": "45b811473a5fe9cd0b6c7202be140ed62e12e3f48406fe1063363dc943d9acfb",
+  "main-trials.json": "ab28292c8c760df1ede2ca0cb9e1535af8cd65fbd6818928e94240cf4dbab8c6",
+  "analysis.json": "f2a963fc31f1e5cd855fddc8dfc45c9bdc9dfc2d4d5b18bd5b4914b650166bdd",
+  "provenance.json": "24a6f948d27ae512d0b3d750c8086cba2bcb5745db32f88001f8fd4fb4d55ae4",
+  "pilot-audit.json": "a401ac6664fcb6bc9cf163934447f5211e57b0d0641a65158be7b0fa28b4ce99",
+  "main-audit.json": "c9a5819a4ef8f21cd39ef3901b8b99bd10ad81d52f83bcaccf058ba0d94bc668"
+}

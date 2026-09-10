@@ -1,0 +1,98 @@
+{
+  "study_date_utc": "2026-09-10",
+  "personal_conversation_history_used": false,
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-6-astra"
+  ],
+  "cli_version": "codex-cli 0.153.4",
+  "requested_reasoning_effort": "high",
+  "child_sandbox": "workspace-write",
+  "models_are_cli_identifiers_not_independently_attested_weight_snapshots": true,
+  "pilot_protocol_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+  "main_protocol_sha256": "cecfd2806c3d3bb935b9624e21c35298bd54b612c5de39314a0853dcb7950d1c",
+  "initial_main_protocol_publication_commit": "07f7df84d6f0b2ea053dba759dfd2e5f6b3cc4cb",
+  "initial_main_protocol_commit_time_utc": "2026-09-10T09:58:26Z",
+  "independent_preregistration_service_used": false,
+  "design": "Disjoint pilot and main samples; fixed questions, prompts, order and attempt counts before each batch. No outcome-based stopping or retries.",
+  "execution": "One sequential runner per study. Pilot and main runners overlapped temporarily, with at most two concurrent model attempts. Latency is end-to-end and descriptive only.",
+  "analysis_additions": "Wilson marginal proportion intervals, worst-case missing-data bounds and a single-assistant trace audit were added during collection as exploratory diagnostics; the primary paired code-candidate comparison is unchanged.",
+  "public_export": "An explicit field allowlist retains new benchmark answers, sanitized tool inputs, command outputs/status, metrics, usage, and instruction hashes. Raw host instruction bodies, session IDs, credentials and local paths are excluded.",
+  "privacy_boundary": "Original Codex session storage is retained; only task-created dataset copies and exports were removed. New experiment logs are local and private.",
+  "limitations": [
+    "Small sample from four reasoning task families.",
+    "Public training-data contamination cannot be excluded.",
+    "Effective developer context differs between models despite a shared custom base.",
+    "Inline interpreter/awk proxy does not cover all programming.",
+    "No monetary cost estimate: usage fields are CLI-reported token accounting.",
+    "The shared custom base prompt differs from a normal default Codex conversation.",
+    "Single-assistant trace labels are not independent or blinded.",
+    "One generation per cell; no equivalence margin or confirmatory power target."
+  ],
+  "generation_seed_or_temperature_controlled": false,
+  "context_hashes_cover_complete_backend_request": false,
+  "infrastructure_incident": {
+    "trial": "main/t0051",
+    "kind": "launch_error",
+    "model_request_started": false,
+    "evidence": "Parent runner raised FileNotFoundError from subprocess.Popen; empty event and stderr files; no child thread created.",
+    "handling": "Retained as invalid/missing. Not retried. Reconstructed its result envelope from the launch exception and sealed job identity.",
+    "environment_change": "Global npm Codex executable was replaced during collection and subsequently reported version 0.154.0.",
+    "continuation": "Resume at t0052 with a local copy of the installed desktop CLI 0.153.4; leave the global installation unchanged.",
+    "continuation_binary_sha256": "a30ec314bbd0e3721632234d07db7c99855db3b9f1e32dbe8c791947f07e7629",
+    "equivalence_limit": "Observed version, effective base/developer hashes and settings are compared across phases; byte identity to the unavailable original npm binary cannot be established.",
+    "first_recovery_trial": "main/t0052",
+    "first_recovery_check": "The CLI completed and answered correctly with version 0.153.4 and matching context hashes, but this check did not exercise tools and failed to detect the missing helper. This trial was subsequently excluded with all other affected sessions."
+  },
+  "hash_normalization": "Developer content arrays serialized with sorted JSON keys and UTF-8 text; task/workspace/trial/run/home prefixes replaced with stable placeholders before SHA-256. Raw hashes are also retained. Hashes do not cover all hidden/server/tool context.",
+  "tool_host_recovery_incident": {
+    "cause": "The initial local recovery copy omitted the adjacent codex-code-mode-host executable required by the desktop CLI.",
+    "detected_from": "CLI error items stating Code Mode is unavailable and tool-call failures, not from answer correctness or code-use outcomes.",
+    "uniform_exclusion_rule": "Exclude every trial with that fatal startup diagnostic from all comparative metrics, including trials that made no tool call. Preserve answers and calls; telemetry_valid and valid are separate fields.",
+    "repair": "Copied the matching helper from the same installed desktop application; its SHA-256 is recorded.",
+    "code_mode_host_sha256": "fdd977821def000939dd48da48b39d581845470671135bd4642584eeb0762a6b",
+    "retry_policy": "No affected model attempt is retried or silently replaced.",
+    "affected_trials": [
+      "t0052",
+      "t0053",
+      "t0054",
+      "t0055",
+      "t0056",
+      "t0057",
+      "t0058",
+      "t0059",
+      "t0060",
+      "t0061"
+    ],
+    "first_verified_command_executions": [
+      "main/t0062",
+      "main/t0063"
+    ]
+  },
+  "collector_changes": "Added automatic launch-error records and invalidation for fatal Code Mode startup diagnostics. Existing traces are uniformly reprocessed; protocol prompts and the primary proxy definition are unchanged.",
+  "public_history_cleanup": "Working-tree copies of prior studies were removed. Old Git history remains pending explicit confirmation for repository deletion and recreation.",
+  "final_checks": {
+    "pilot": {
+      "scheduled": 24,
+      "completed_sessions": 24,
+      "usable": 24,
+      "first_session_started_at": "2026-09-10T09:55:57.128Z",
+      "last_session_finished_at": "2026-09-10T10:07:18.077Z",
+      "additional_visible_assistant_messages_outside_exported_answers": 0,
+      "session_cli_versions": [
+        "0.153.4"
+      ]
+    },
+    "main": {
+      "scheduled": 144,
+      "completed_sessions": 143,
+      "usable": 133,
+      "first_session_started_at": "2026-09-10T10:00:14.207Z",
+      "last_session_finished_at": "2026-09-10T11:11:08.336Z",
+      "additional_visible_assistant_messages_outside_exported_answers": 0,
+      "session_cli_versions": [
+        "0.153.4"
+      ]
+    }
+  }
+}

@@ -5,7 +5,15 @@ following, correctness, and resource use. English-only research materials, publi
 benchmark data, and explicit prompt interventions. Python 3.9+.
 
 **First question: Does GPT-6 Astra use more auxiliary code than GPT-5.6 Sol?**
-The repository defines a testable protocol; it does not assume the answer.
+**Completed study:** on 24 sampled standard-dataset questions, neither model used
+visible task-specific code in any usable neutral trial. In every usable code-request
+trial, both models wrote and executed a program. The main study contains 144 scheduled cells,
+133 usable observations and 11 retained infrastructure exclusions; a separate
+24-attempt pilot is also available. This does not establish general equivalence.
+
+Read the [full results and limitations](studies/standard-benchmarks/REPORT.md),
+[trial data](studies/standard-benchmarks/main-trials.json), and
+[reproducible analysis](studies/standard-benchmarks/analysis.json).
 No personal conversations or locally collected chat-history datasets are used.
 
 ## Public benchmark sources
@@ -46,6 +54,7 @@ differ between models. See [prompt analysis](docs/PROMPTS.md) and
 ```bash
 python3 -m unittest discover -s tests -v
 python3 studies/standard-benchmarks/verify.py
+python3 studies/standard-benchmarks/reproduce.py --check
 mkdir -p private-runs
 python3 -m behavior_lab fetch private-runs/cache
 python3 -m behavior_lab benchmark-plan private-runs/cache private-runs/plan.json \
@@ -61,10 +70,11 @@ Do not treat these planned counts as completed experiments. Inspect the first
 trial before continuing; [RUNNING.md](docs/RUNNING.md) shows how to resume and
 analyze complete matched pairs.
 
-A [24-attempt pilot protocol](studies/standard-benchmarks/protocol.json) selects
-one question per source. It is an infrastructure/prompt manipulation check, far
-too small for a population-level model comparison. Study status and any collected
-results are documented in [the study card](studies/standard-benchmarks/README.md).
+The completed [pilot](studies/standard-benchmarks/protocol.json) and
+[main study](studies/standard-benchmarks/main-protocol.json) use disjoint samples.
+The main study crosses 24 questions, two models and three prompts. Both plans
+were frozen before their respective collections. The [study card](studies/standard-benchmarks/README.md)
+records coverage, exclusions and reproduction commands.
 
 The primary automatic behavior measure is a versioned inline interpreter/awk
 **candidate proxy**, not a complete semantic measure of all programming.
@@ -75,5 +85,9 @@ Read [RUNNING.md](docs/RUNNING.md) before executing agents. Raw logs remain priv
 public results must exclude host instructions, credentials and local paths.
 For larger-scale execution, consider [Inspect](https://inspect.aisi.org.uk/).
 Contributions and null findings are welcome: [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Prior-study working-tree files were removed. Old public Git history has not yet
+been purged; repository deletion and recreation await separate confirmation.
+Those historical records are not inputs to the current standard-benchmark study.
 
 License: [MIT](LICENSE), with upstream notices retained. No model ranking is claimed.

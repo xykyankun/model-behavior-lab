@@ -25,6 +25,9 @@ Code-generation datasets would be positive controls rather than suitable primary
 data for measuring unsolicited code use.
 
 Sampling uses a fixed seed within each source, independently of model outputs.
+The seed controls question selection and run order only; the CLI adapter does not
+set a generation seed or temperature. One attempt per cell does not characterize
+within-question sampling variability.
 Questions are copied verbatim; method and final-answer instructions are explicit
 adaptations. Tool access and zero-shot prompting make this a dataset-backed
 behavior study, not a reproduction of a published leaderboard protocol. Benchmark
@@ -63,11 +66,21 @@ includes all scheduled jobs; an arbitrary JSON array cannot reveal omitted pairs
 Do not confuse questions with independent task families. Analyze each dataset
 separately; any cross-dataset aggregate must specify its weights. The supplied analysis assigns equal weight
 to each question, so a full-corpus aggregate gives more weight to GSM8K. Equal
-sampling per source gives equal source weights. The statistics
+sampling per source gives equal source weights before exclusions. Complete-case
+exclusions can change the realized source weights; report the retained questions
+and source counts rather than claiming that balance is preserved. The statistics
 assume exchangeability of sampled questions, and the sign-flip test assumes
 symmetric difference signs under the null. Small pilots and few discordant pairs
 produce weak inference. No multiplicity correction is currently implemented;
 multiple prompts, metrics and subgroup analyses must be labeled exploratory.
+
+When every observed paired difference is zero, the empirical bootstrap returns
+the degenerate interval `[0, 0]`. That result does not establish equivalence or
+exclude meaningful population differences. The published study also reports
+[Wilson intervals](https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm)
+for marginal proportions, with their binomial assumptions stated. Worst-case
+missing-data bounds assign every unusable planned observation either zero or one;
+they describe the fixed planned sample, not population sampling uncertainty.
 
 Define a minimum meaningful effect and plan sample size using the paired design,
 question-family dependence and expected failure rate. Repeated runs of one easy

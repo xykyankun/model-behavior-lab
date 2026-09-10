@@ -1,0 +1,218 @@
+[
+  {
+    "study": "pilot",
+    "id": "t0001",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0002",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0003",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0004",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0005",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0006",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0007",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0008",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0009",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0010",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0011",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0012",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0013",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0014",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0015",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0016",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0017",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0018",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0019",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0020",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0021",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0022",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0023",
+    "visible_program_authored": true,
+    "execution_confirmed": true,
+    "language": "python",
+    "purpose": "solve_or_verify",
+    "reviewer": "single assistant; not independent or blinded"
+  },
+  {
+    "study": "pilot",
+    "id": "t0024",
+    "visible_program_authored": false,
+    "execution_confirmed": false,
+    "language": null,
+    "purpose": "direct_answer",
+    "reviewer": "single assistant; not independent or blinded"
+  }
+]

@@ -1,50 +1,71 @@
-# Public benchmark prompt pilot
+# Standard benchmark prompt experiment
 
-**Status: pilot collection started; main protocol frozen before main collection.**
+**Status: completed on September 10, 2026.** Read the [full report](REPORT.md).
 
-The sealed protocol samples one question from each of four public benchmark
-sources, then crosses two models with three prompt conditions: 24 scheduled
-attempts and four unique questions. This is a smoke/prompt-manipulation pilot,
-not a sufficiently powered study of general model behavior.
+| Batch | Unique questions | Scheduled cells | Completed model sessions | Usable observations | Infrastructure exclusions |
+|---|---:|---:|---:|---:|---:|
+| Pilot | 4 | 24 | 24 | 24 | 0 |
+| Main | 24 | 144 | 143 | 133 | 11 |
 
-Sources contain 1,319 GSM8K test examples and 250 examples each from BBH word
-sorting, object counting and logical deduction with three objects. The source
-manifest pins exact revisions and SHA-256 checksums. Source indices are preserved
-in every case. Upstream questions and targets are licensed under the accompanying
-MIT notices. No private or personal conversation data is included.
+There are no unattempted cells. A launch failure has a retained record but no
+completed model session. Ten other cells were excluded uniformly because the
+Code Mode host was unavailable, including sessions that made no tool call. No
+failed attempt was retried or replaced. See [provenance.json](provenance.json).
 
-The protocol contains exact prompts, reference targets, method conditions, model
-IDs, reasoning effort, sampling seed, randomized order and stopping rule. Targets
-are used only by the scorer, not inserted into task prompts or workspaces.
+In usable observations, both models used no visible task-specific program under
+neutral/no-code prompts and used an executed Python program under the explicit
+code request. 132/133 usable main answers were correct (24/24 in the separate pilot). The narrow sample, near-ceiling scores,
+shared custom base and model-dependent developer context prevent general model
+rankings or equivalence claims. The report quantifies uncertainty and missingness.
 
-Verify the plan offline:
+## Sources and design
+
+[GSM8K test](https://github.com/openai/grade-school-math) contains 1,319 examples;
+[BIG-Bench Hard](https://github.com/suzgunmirac/BIG-Bench-Hard) word sorting,
+object counting and logical deduction with three objects contain 250 each.
+The [manifest](../../behavior_lab/sources.json) pins revisions and byte hashes;
+[MIT notices](../../third_party) are retained. These are standard datasets used
+with an adapted zero-shot/tool-enabled protocol, not official benchmark scores.
+
+The pilot samples one question per source (seed 20260910). The disjoint main
+sample selects six per source (seed 20260911). Each crosses two models and three
+method prompts, one generation per cell, in frozen randomized order. Exact
+questions, targets, prompts, models, effort and stopping rules are in
+[protocol.json](protocol.json) and [main-protocol.json](main-protocol.json).
+Targets are used by the scorer and are not inserted into task prompts/workspaces.
+
+The main primary contrast is the paired neutral-prompt code-candidate rate,
+Astra minus Sol. It retains 22 complete question pairs, with equal weight per
+retained question; missingness changes source weights. Other prompts, accuracy,
+resource use, source breakdowns and trace audits are exploratory. The four pilot
+questions are not pooled with the main sample for inference.
+
+## Reproduce offline
+
+From the repository root, without model calls:
 
 ```bash
+python3 -m unittest discover -s tests -v
 python3 studies/standard-benchmarks/verify.py
+python3 studies/standard-benchmarks/reproduce.py --check
 ```
 
-Re-verify the selected questions against the complete pinned public sources:
+The [public trial records](main-trials.json), [audit labels](main-audit.json),
+[analysis](analysis.json) and [checksums](checksums.json) support offline review.
+Audit labels were supplied by one assistant, not independent blinded annotators.
+The automatic metric is a versioned inline-interpreter/awk candidate proxy.
+The audit checks visible programs separately; neither measures code necessity.
+
+To check exact question selection against the complete pinned source files:
 
 ```bash
 python3 -m behavior_lab fetch private-runs/cache
 python3 studies/standard-benchmarks/verify.py --cache private-runs/cache
 ```
 
-When results are available, report all 24 cells, failures, exact prompt hashes,
-correctness and code-candidate rates separately by model, prompt and source.
-Do not publish local host instruction bodies, credentials, session IDs or paths.
-Do not treat standard-dataset names as proof of standard benchmark comparability.
-
-## Independent main sample
-
-`main-protocol.json` selects six questions per source with seed 20260911:
-24 questions, two models, three prompts, one attempt per cell = 144 attempts.
-The sample has no overlap with the four pilot questions. It was fixed after one
-successful infrastructure trial, before inspecting the remaining pilot outcomes.
-Report it separately from the 24-attempt pilot; do not pool to improve significance.
-The main primary contrast is the paired neutral-prompt code-candidate rate,
-GPT-6 Astra minus GPT-5.6 Sol, with equal weight per question and source. Other
-prompts, accuracy, format, latency, usage, and source subgroups are exploratory.
-Keep the same stopping rule: attempt every cell once; retain failures; do not
-add questions or retries in response to results. This is a limited exploratory
-study, not a powered confirmatory test or an official benchmark submission.
+For new model calls, follow [RUNNING.md](../../docs/RUNNING.md). A new run consumes
+Codex usage and produces new stochastic observations. No personal conversation
+history or previous synthetic-study results are used. Private raw logs, host
+instruction bodies, credentials, local paths and session IDs are not published.
+Prior-study files were removed from the current tree; clearing old public Git
+history still awaits separate repository-deletion confirmation.

@@ -1,0 +1,4538 @@
+{
+  "pilot": {
+    "protocol_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "scheduled": 24,
+    "unique_questions": 4,
+    "attempted": 24,
+    "unattempted": 0,
+    "invalid_attempts": 0,
+    "valid": 24,
+    "statuses": {
+      "finished": 24
+    },
+    "rates": {
+      "gpt-5.6-sol": {
+        "neutral": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 4,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 23.9795,
+          "usage_totals": {
+            "input_tokens": 41565,
+            "cached_input_tokens": 13312,
+            "output_tokens": 389
+          },
+          "usage_available_trials": 4
+        },
+        "no_code": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 4,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 24.963,
+          "usage_totals": {
+            "input_tokens": 41577,
+            "cached_input_tokens": 28928,
+            "output_tokens": 346
+          },
+          "usage_available_trials": 4
+        },
+        "code_preferred": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 32.8855,
+          "usage_totals": {
+            "input_tokens": 83980,
+            "cached_input_tokens": 54272,
+            "output_tokens": 802
+          },
+          "usage_available_trials": 4
+        }
+      },
+      "gpt-6-astra": {
+        "neutral": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 4,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 22.445500000000003,
+          "usage_totals": {
+            "input_tokens": 44317,
+            "cached_input_tokens": 14080,
+            "output_tokens": 235
+          },
+          "usage_available_trials": 4
+        },
+        "no_code": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 4,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.4898908364545973
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 22.762999999999998,
+          "usage_totals": {
+            "input_tokens": 44329,
+            "cached_input_tokens": 27136,
+            "output_tokens": 272
+          },
+          "usage_available_trials": 4
+        },
+        "code_preferred": {
+          "scheduled": 4,
+          "attempted": 4,
+          "valid": 4,
+          "statuses": {
+            "finished": 4
+          },
+          "aux_code_with_awk": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "correct": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 4,
+            "observed": 4,
+            "rate": 1.0,
+            "wilson_95": [
+              0.5101091635454027,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 31.3175,
+          "usage_totals": {
+            "input_tokens": 89253,
+            "cached_input_tokens": 71808,
+            "output_tokens": 405
+          },
+          "usage_available_trials": 4
+        }
+      }
+    },
+    "missing_data_bounds": {
+      "neutral": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          0.0,
+          0.0
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      },
+      "no_code": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          0.0,
+          0.0
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      },
+      "code_preferred": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 4,
+            "known": 4,
+            "missing": 0,
+            "rate_bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          0.0,
+          0.0
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      }
+    },
+    "paired_comparisons": {
+      "neutral": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 0.0,
+          "b_mean": 0.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      },
+      "no_code": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 0.0,
+          "b_mean": 0.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      },
+      "code_preferred": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 4,
+          "excluded_tasks": [],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0043",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0014",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0240",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0866",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      }
+    },
+    "prompt_interactions": {
+      "no_code": {
+        "matched_questions": 4,
+        "excluded_questions": [],
+        "question_contrasts": [
+          {
+            "case": "bbh_logical_deduction_three_objects_0043",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0014",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0240",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_0866",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          }
+        ],
+        "a_change": 0,
+        "b_change": 0,
+        "interaction_b_minus_a": 0,
+        "interpretation": "Descriptive, exploratory contrast. No causal attribution to model weights."
+      },
+      "code_preferred": {
+        "matched_questions": 4,
+        "excluded_questions": [],
+        "question_contrasts": [
+          {
+            "case": "bbh_logical_deduction_three_objects_0043",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0014",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0240",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_0866",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          }
+        ],
+        "a_change": 1,
+        "b_change": 1,
+        "interaction_b_minus_a": 0,
+        "interpretation": "Descriptive, exploratory contrast. No causal attribution to model weights."
+      }
+    },
+    "exclusions": {},
+    "by_source": {
+      "bbh_logical_deduction_three_objects": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 20.741,
+            "usage_totals": {
+              "input_tokens": 10437,
+              "cached_input_tokens": 0,
+              "output_tokens": 21
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.02,
+            "usage_totals": {
+              "input_tokens": 10440,
+              "cached_input_tokens": 8960,
+              "output_tokens": 21
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 36.18,
+            "usage_totals": {
+              "input_tokens": 21136,
+              "cached_input_tokens": 10240,
+              "output_tokens": 233
+            },
+            "usage_available_trials": 1
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 20.233,
+            "usage_totals": {
+              "input_tokens": 11125,
+              "cached_input_tokens": 7040,
+              "output_tokens": 9
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 15.06,
+            "usage_totals": {
+              "input_tokens": 11128,
+              "cached_input_tokens": 7040,
+              "output_tokens": 23
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 34.921,
+            "usage_totals": {
+              "input_tokens": 22447,
+              "cached_input_tokens": 18048,
+              "output_tokens": 134
+            },
+            "usage_available_trials": 1
+          }
+        }
+      },
+      "bbh_object_counting": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 23.091,
+            "usage_totals": {
+              "input_tokens": 10370,
+              "cached_input_tokens": 0,
+              "output_tokens": 63
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.396,
+            "usage_totals": {
+              "input_tokens": 10373,
+              "cached_input_tokens": 6656,
+              "output_tokens": 66
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 29.895,
+            "usage_totals": {
+              "input_tokens": 20905,
+              "cached_input_tokens": 16896,
+              "output_tokens": 136
+            },
+            "usage_available_trials": 1
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 20.127,
+            "usage_totals": {
+              "input_tokens": 11058,
+              "cached_input_tokens": 0,
+              "output_tokens": 34
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 21.899,
+            "usage_totals": {
+              "input_tokens": 11061,
+              "cached_input_tokens": 6016,
+              "output_tokens": 35
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 35.012,
+            "usage_totals": {
+              "input_tokens": 22210,
+              "cached_input_tokens": 17920,
+              "output_tokens": 66
+            },
+            "usage_available_trials": 1
+          }
+        }
+      },
+      "bbh_word_sorting": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.975,
+            "usage_totals": {
+              "input_tokens": 10374,
+              "cached_input_tokens": 6656,
+              "output_tokens": 167
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.906,
+            "usage_totals": {
+              "input_tokens": 10377,
+              "cached_input_tokens": 6656,
+              "output_tokens": 123
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 34.772,
+            "usage_totals": {
+              "input_tokens": 20950,
+              "cached_input_tokens": 10240,
+              "output_tokens": 173
+            },
+            "usage_available_trials": 1
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.057,
+            "usage_totals": {
+              "input_tokens": 11062,
+              "cached_input_tokens": 7040,
+              "output_tokens": 87
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 23.627,
+            "usage_totals": {
+              "input_tokens": 11065,
+              "cached_input_tokens": 7040,
+              "output_tokens": 77
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 27.212,
+            "usage_totals": {
+              "input_tokens": 22295,
+              "cached_input_tokens": 17920,
+              "output_tokens": 109
+            },
+            "usage_available_trials": 1
+          }
+        }
+      },
+      "gsm8k_test": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.868,
+            "usage_totals": {
+              "input_tokens": 10384,
+              "cached_input_tokens": 6656,
+              "output_tokens": 138
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 23.646,
+            "usage_totals": {
+              "input_tokens": 10387,
+              "cached_input_tokens": 6656,
+              "output_tokens": 136
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 30.999,
+            "usage_totals": {
+              "input_tokens": 20989,
+              "cached_input_tokens": 16896,
+              "output_tokens": 260
+            },
+            "usage_available_trials": 1
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.658,
+            "usage_totals": {
+              "input_tokens": 11072,
+              "cached_input_tokens": 0,
+              "output_tokens": 105
+            },
+            "usage_available_trials": 1
+          },
+          "no_code": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 1,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.7934506856227626
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.962,
+            "usage_totals": {
+              "input_tokens": 11075,
+              "cached_input_tokens": 7040,
+              "output_tokens": 137
+            },
+            "usage_available_trials": 1
+          },
+          "code_preferred": {
+            "scheduled": 1,
+            "attempted": 1,
+            "valid": 1,
+            "statuses": {
+              "finished": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 1,
+              "observed": 1,
+              "rate": 1.0,
+              "wilson_95": [
+                0.20654931437723745,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 27.714,
+            "usage_totals": {
+              "input_tokens": 22301,
+              "cached_input_tokens": 17920,
+              "output_tokens": 96
+            },
+            "usage_available_trials": 1
+          }
+        }
+      }
+    },
+    "context": {
+      "gpt-5.6-sol": {
+        "valid_trials": 12,
+        "shared_base_text_matches": 12,
+        "base_profiles": [
+          [
+            "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+          ]
+        ],
+        "normalized_developer_profiles": [
+          [
+            "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+            "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+            "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+          ]
+        ],
+        "developer_lengths": [
+          [
+            9923,
+            2335,
+            307
+          ]
+        ]
+      },
+      "gpt-6-astra": {
+        "valid_trials": 12,
+        "shared_base_text_matches": 12,
+        "base_profiles": [
+          [
+            "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+          ]
+        ],
+        "normalized_developer_profiles": [
+          [
+            "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+            "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+            "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+          ]
+        ],
+        "developer_lengths": [
+          [
+            11305,
+            2501,
+            307
+          ]
+        ]
+      }
+    },
+    "trace_audit": {
+      "status": "single-assistant audit; not independent or blinded",
+      "groups": {
+        "gpt-6-astra/no_code": {
+          "observed": 4,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-5.6-sol/no_code": {
+          "observed": 4,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-5.6-sol/neutral": {
+          "observed": 4,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-6-astra/code_preferred": {
+          "observed": 4,
+          "programs_authored": 4,
+          "executions_confirmed": 4
+        },
+        "gpt-6-astra/neutral": {
+          "observed": 4,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-5.6-sol/code_preferred": {
+          "observed": 4,
+          "programs_authored": 4,
+          "executions_confirmed": 4
+        }
+      },
+      "proxy_disagreement_ids": [],
+      "languages": {
+        "python": 8
+      },
+      "purposes": {
+        "direct_answer": 16,
+        "solve_or_verify": 8
+      }
+    }
+  },
+  "main": {
+    "protocol_sha256": "cecfd2806c3d3bb935b9624e21c35298bd54b612c5de39314a0853dcb7950d1c",
+    "scheduled": 144,
+    "unique_questions": 24,
+    "attempted": 144,
+    "unattempted": 0,
+    "invalid_attempts": 11,
+    "valid": 133,
+    "statuses": {
+      "finished": 143,
+      "launch_error": 1
+    },
+    "rates": {
+      "gpt-5.6-sol": {
+        "neutral": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 24,
+          "statuses": {
+            "finished": 24
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 24,
+            "rate": 0.0,
+            "wilson_95": [
+              1.3877787807814457e-17,
+              0.13797620467498017
+            ]
+          },
+          "correct": {
+            "positive": 24,
+            "observed": 24,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8620237953250198,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 24,
+            "observed": 24,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8620237953250198,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 23.2275,
+          "usage_totals": {
+            "input_tokens": 249279,
+            "cached_input_tokens": 175360,
+            "output_tokens": 1751
+          },
+          "usage_available_trials": 24
+        },
+        "no_code": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 21,
+          "statuses": {
+            "finished": 24
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 21,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.154639018924847
+            ]
+          },
+          "correct": {
+            "positive": 20,
+            "observed": 21,
+            "rate": 0.9523809523809523,
+            "wilson_95": [
+              0.7733063992587743,
+              0.9915440121901737
+            ]
+          },
+          "format_compliant": {
+            "positive": 21,
+            "observed": 21,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8453609810751531,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 24.576999999999998,
+          "usage_totals": {
+            "input_tokens": 249351,
+            "cached_input_tokens": 178688,
+            "output_tokens": 2000
+          },
+          "usage_available_trials": 24
+        },
+        "code_preferred": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 22,
+          "statuses": {
+            "finished": 24
+          },
+          "aux_code_with_awk": {
+            "positive": 22,
+            "observed": 22,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8513451253913791,
+              1.0
+            ]
+          },
+          "correct": {
+            "positive": 22,
+            "observed": 22,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8513451253913791,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 22,
+            "observed": 22,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8513451253913791,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 34.4955,
+          "usage_totals": {
+            "input_tokens": 525518,
+            "cached_input_tokens": 399744,
+            "output_tokens": 5146
+          },
+          "usage_available_trials": 24
+        }
+      },
+      "gpt-6-astra": {
+        "neutral": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 22,
+          "statuses": {
+            "finished": 24
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 22,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.14865487460862087
+            ]
+          },
+          "correct": {
+            "positive": 22,
+            "observed": 22,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8513451253913791,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 22,
+            "observed": 22,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8513451253913791,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 24.796,
+          "usage_totals": {
+            "input_tokens": 265791,
+            "cached_input_tokens": 154880,
+            "output_tokens": 1188
+          },
+          "usage_available_trials": 24
+        },
+        "no_code": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 23,
+          "statuses": {
+            "finished": 24
+          },
+          "aux_code_with_awk": {
+            "positive": 0,
+            "observed": 23,
+            "rate": 0.0,
+            "wilson_95": [
+              0.0,
+              0.14311661845042686
+            ]
+          },
+          "correct": {
+            "positive": 23,
+            "observed": 23,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8568833815495731,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 23,
+            "observed": 23,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8568833815495731,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 24.634,
+          "usage_totals": {
+            "input_tokens": 265863,
+            "cached_input_tokens": 126720,
+            "output_tokens": 1241
+          },
+          "usage_available_trials": 24
+        },
+        "code_preferred": {
+          "scheduled": 24,
+          "attempted": 24,
+          "valid": 21,
+          "statuses": {
+            "finished": 23,
+            "launch_error": 1
+          },
+          "aux_code_with_awk": {
+            "positive": 21,
+            "observed": 21,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8453609810751531,
+              1.0
+            ]
+          },
+          "correct": {
+            "positive": 21,
+            "observed": 21,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8453609810751531,
+              1.0
+            ]
+          },
+          "format_compliant": {
+            "positive": 21,
+            "observed": 21,
+            "rate": 1.0,
+            "wilson_95": [
+              0.8453609810751531,
+              1.0
+            ]
+          },
+          "trials_with_command_failure": 0,
+          "median_end_to_end_seconds": 34.094,
+          "usage_totals": {
+            "input_tokens": 524334,
+            "cached_input_tokens": 354560,
+            "output_tokens": 2418
+          },
+          "usage_available_trials": 23
+        }
+      }
+    },
+    "missing_data_bounds": {
+      "neutral": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 24,
+            "known": 24,
+            "missing": 0,
+            "rate_bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 24,
+            "known": 22,
+            "missing": 2,
+            "rate_bounds": [
+              0.0,
+              0.08333333333333333
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          0.0,
+          0.08333333333333333
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      },
+      "no_code": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 24,
+            "known": 21,
+            "missing": 3,
+            "rate_bounds": [
+              0.0,
+              0.125
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 24,
+            "known": 23,
+            "missing": 1,
+            "rate_bounds": [
+              0.0,
+              0.041666666666666664
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          -0.125,
+          0.041666666666666664
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      },
+      "code_preferred": {
+        "models": [
+          {
+            "model": "gpt-5.6-sol",
+            "planned": 24,
+            "known": 22,
+            "missing": 2,
+            "rate_bounds": [
+              0.9166666666666666,
+              1.0
+            ]
+          },
+          {
+            "model": "gpt-6-astra",
+            "planned": 24,
+            "known": 21,
+            "missing": 3,
+            "rate_bounds": [
+              0.875,
+              1.0
+            ]
+          }
+        ],
+        "difference_b_minus_a_bounds": [
+          -0.125,
+          0.08333333333333337
+        ],
+        "interpretation": "Assign all unusable cells either 0 or 1. Bounds concern these planned questions only, not sampling uncertainty or a causal effect."
+      }
+    },
+    "paired_comparisons": {
+      "neutral": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 22,
+          "excluded_tasks": [
+            "gsm8k_test_0553",
+            "gsm8k_test_0613"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0173",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0209",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0211",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0011",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0108",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0295",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0329",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0714",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 0.0,
+          "b_mean": 0.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 22,
+          "excluded_tasks": [
+            "gsm8k_test_0553",
+            "gsm8k_test_0613"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0173",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0209",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0011",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0108",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0295",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0329",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0714",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      },
+      "no_code": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 20,
+          "excluded_tasks": [
+            "bbh_object_counting_0173",
+            "bbh_word_sorting_0011",
+            "bbh_word_sorting_0108",
+            "gsm8k_test_0295"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0209",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0211",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0329",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0553",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0613",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0714",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 0.0,
+              "b": 0.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 0.0,
+          "b_mean": 0.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 20,
+          "excluded_tasks": [
+            "bbh_object_counting_0173",
+            "bbh_word_sorting_0011",
+            "bbh_word_sorting_0108",
+            "gsm8k_test_0295"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0209",
+              "a": 0.0,
+              "b": 1.0,
+              "difference": 1.0
+            },
+            {
+              "case": "bbh_object_counting_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0329",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0553",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0613",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0714",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 0.95,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.05,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.15
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      },
+      "code_preferred": {
+        "aux_code_with_awk": {
+          "metric": "aux_code_with_awk",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 19,
+          "excluded_tasks": [
+            "bbh_object_counting_0209",
+            "bbh_object_counting_0211",
+            "bbh_word_sorting_0108",
+            "gsm8k_test_0329",
+            "gsm8k_test_0714"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0173",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0011",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0295",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0553",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0613",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        },
+        "correct": {
+          "metric": "correct",
+          "model_a": "gpt-5.6-sol",
+          "model_b": "gpt-6-astra",
+          "matched_tasks": 19,
+          "excluded_tasks": [
+            "bbh_object_counting_0209",
+            "bbh_object_counting_0211",
+            "bbh_word_sorting_0108",
+            "gsm8k_test_0329",
+            "gsm8k_test_0714"
+          ],
+          "task_means": [
+            {
+              "case": "bbh_logical_deduction_three_objects_0086",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0105",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0108",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0209",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0211",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_logical_deduction_three_objects_0239",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0006",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0007",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0173",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_object_counting_0195",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0011",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0067",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0113",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0129",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "bbh_word_sorting_0154",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0295",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0553",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_0613",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            },
+            {
+              "case": "gsm8k_test_1039",
+              "a": 1.0,
+              "b": 1.0,
+              "difference": 0.0
+            }
+          ],
+          "a_mean": 1.0,
+          "b_mean": 1.0,
+          "difference_b_minus_a": 0.0,
+          "bootstrap_percentile_95": [
+            0.0,
+            0.0
+          ],
+          "sign_flip_p_two_sided": 1.0,
+          "test": "exact task-level sign-flip",
+          "seed": 1729,
+          "draws": 20000,
+          "interpretation": "Exploratory; assumes exchangeable tasks and symmetric differences under null. Not a causal test or a population CI for a hand-picked set. No multiplicity correction."
+        }
+      }
+    },
+    "prompt_interactions": {
+      "no_code": {
+        "matched_questions": 18,
+        "excluded_questions": [
+          "bbh_object_counting_0173",
+          "bbh_word_sorting_0011",
+          "bbh_word_sorting_0108",
+          "gsm8k_test_0295",
+          "gsm8k_test_0553",
+          "gsm8k_test_0613"
+        ],
+        "question_contrasts": [
+          {
+            "case": "bbh_logical_deduction_three_objects_0086",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0105",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0108",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0209",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0211",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0239",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0006",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0007",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0195",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0209",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0211",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0067",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0113",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0129",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0154",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_0329",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_0714",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_1039",
+            "a_change": 0,
+            "b_change": 0,
+            "interaction": 0
+          }
+        ],
+        "a_change": 0,
+        "b_change": 0,
+        "interaction_b_minus_a": 0,
+        "interpretation": "Descriptive, exploratory contrast. No causal attribution to model weights."
+      },
+      "code_preferred": {
+        "matched_questions": 17,
+        "excluded_questions": [
+          "bbh_object_counting_0209",
+          "bbh_object_counting_0211",
+          "bbh_word_sorting_0108",
+          "gsm8k_test_0329",
+          "gsm8k_test_0553",
+          "gsm8k_test_0613",
+          "gsm8k_test_0714"
+        ],
+        "question_contrasts": [
+          {
+            "case": "bbh_logical_deduction_three_objects_0086",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0105",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0108",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0209",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0211",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_logical_deduction_three_objects_0239",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0006",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0007",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0173",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_object_counting_0195",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0011",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0067",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0113",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0129",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "bbh_word_sorting_0154",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_0295",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          },
+          {
+            "case": "gsm8k_test_1039",
+            "a_change": 1,
+            "b_change": 1,
+            "interaction": 0
+          }
+        ],
+        "a_change": 1,
+        "b_change": 1,
+        "interaction_b_minus_a": 0,
+        "interpretation": "Descriptive, exploratory contrast. No causal attribution to model weights."
+      }
+    },
+    "exclusions": {
+      "t0051": "launch_error",
+      "t0052": "code_mode_host_unavailable",
+      "t0053": "code_mode_host_unavailable",
+      "t0054": "code_mode_host_unavailable",
+      "t0055": "code_mode_host_unavailable",
+      "t0056": "code_mode_host_unavailable",
+      "t0057": "code_mode_host_unavailable",
+      "t0058": "code_mode_host_unavailable",
+      "t0059": "code_mode_host_unavailable",
+      "t0060": "code_mode_host_unavailable",
+      "t0061": "code_mode_host_unavailable"
+    },
+    "by_source": {
+      "bbh_logical_deduction_three_objects": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 19.3595,
+            "usage_totals": {
+              "input_tokens": 62554,
+              "cached_input_tokens": 44544,
+              "output_tokens": 165
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 20.0285,
+            "usage_totals": {
+              "input_tokens": 62572,
+              "cached_input_tokens": 46848,
+              "output_tokens": 176
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 33.1605,
+            "usage_totals": {
+              "input_tokens": 126643,
+              "cached_input_tokens": 96768,
+              "output_tokens": 1358
+            },
+            "usage_available_trials": 6
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 20.8125,
+            "usage_totals": {
+              "input_tokens": 66682,
+              "cached_input_tokens": 42240,
+              "output_tokens": 138
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 22.9845,
+            "usage_totals": {
+              "input_tokens": 66700,
+              "cached_input_tokens": 35200,
+              "output_tokens": 159
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 35.4745,
+            "usage_totals": {
+              "input_tokens": 134553,
+              "cached_input_tokens": 86016,
+              "output_tokens": 787
+            },
+            "usage_available_trials": 6
+          }
+        }
+      },
+      "bbh_object_counting": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.5125,
+            "usage_totals": {
+              "input_tokens": 62212,
+              "cached_input_tokens": 48128,
+              "output_tokens": 425
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 6,
+              "rate": 0.8333333333333334,
+              "wilson_95": [
+                0.43649717781352987,
+                0.9699466302516935
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 26.963,
+            "usage_totals": {
+              "input_tokens": 62230,
+              "cached_input_tokens": 35840,
+              "output_tokens": 473
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 34.9735,
+            "usage_totals": {
+              "input_tokens": 125860,
+              "cached_input_tokens": 95488,
+              "output_tokens": 1292
+            },
+            "usage_available_trials": 6
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.082,
+            "usage_totals": {
+              "input_tokens": 66340,
+              "cached_input_tokens": 35200,
+              "output_tokens": 286
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 5,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 5,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.811500000000002,
+            "usage_totals": {
+              "input_tokens": 66358,
+              "cached_input_tokens": 35200,
+              "output_tokens": 258
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 4,
+            "statuses": {
+              "finished": 5,
+              "launch_error": 1
+            },
+            "aux_code_with_awk": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 33.58,
+            "usage_totals": {
+              "input_tokens": 122589,
+              "cached_input_tokens": 82688,
+              "output_tokens": 492
+            },
+            "usage_available_trials": 5
+          }
+        }
+      },
+      "bbh_word_sorting": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.235500000000002,
+            "usage_totals": {
+              "input_tokens": 62181,
+              "cached_input_tokens": 33536,
+              "output_tokens": 724
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 4,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 4,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "correct": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 25.284,
+            "usage_totals": {
+              "input_tokens": 62199,
+              "cached_input_tokens": 49152,
+              "output_tokens": 972
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 5,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 33.2585,
+            "usage_totals": {
+              "input_tokens": 136472,
+              "cached_input_tokens": 97024,
+              "output_tokens": 1307
+            },
+            "usage_available_trials": 6
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.9715,
+            "usage_totals": {
+              "input_tokens": 66309,
+              "cached_input_tokens": 35200,
+              "output_tokens": 403
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.68,
+            "usage_totals": {
+              "input_tokens": 66327,
+              "cached_input_tokens": 28160,
+              "output_tokens": 452
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 34.894999999999996,
+            "usage_totals": {
+              "input_tokens": 133531,
+              "cached_input_tokens": 85376,
+              "output_tokens": 601
+            },
+            "usage_available_trials": 6
+          }
+        }
+      },
+      "gsm8k_test": {
+        "gpt-5.6-sol": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 22.576999999999998,
+            "usage_totals": {
+              "input_tokens": 62332,
+              "cached_input_tokens": 49152,
+              "output_tokens": 437
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 5,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 5,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.43448246478317476
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.576999999999998,
+            "usage_totals": {
+              "input_tokens": 62350,
+              "cached_input_tokens": 46848,
+              "output_tokens": 379
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 5,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 35.9475,
+            "usage_totals": {
+              "input_tokens": 136543,
+              "cached_input_tokens": 110464,
+              "output_tokens": 1189
+            },
+            "usage_available_trials": 6
+          }
+        },
+        "gpt-6-astra": {
+          "neutral": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 4,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 4,
+              "rate": 0.0,
+              "wilson_95": [
+                0.0,
+                0.4898908364545973
+              ]
+            },
+            "correct": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 4,
+              "observed": 4,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5101091635454027,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 24.572499999999998,
+            "usage_totals": {
+              "input_tokens": 66460,
+              "cached_input_tokens": 42240,
+              "output_tokens": 361
+            },
+            "usage_available_trials": 6
+          },
+          "no_code": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 6,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 0,
+              "observed": 6,
+              "rate": 0.0,
+              "wilson_95": [
+                2.7755575615628914e-17,
+                0.3903342879021653
+              ]
+            },
+            "correct": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 6,
+              "observed": 6,
+              "rate": 1.0,
+              "wilson_95": [
+                0.6096657120978346,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 22.914,
+            "usage_totals": {
+              "input_tokens": 66478,
+              "cached_input_tokens": 28160,
+              "output_tokens": 372
+            },
+            "usage_available_trials": 6
+          },
+          "code_preferred": {
+            "scheduled": 6,
+            "attempted": 6,
+            "valid": 5,
+            "statuses": {
+              "finished": 6
+            },
+            "aux_code_with_awk": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "correct": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "format_compliant": {
+              "positive": 5,
+              "observed": 5,
+              "rate": 1.0,
+              "wilson_95": [
+                0.5655175352168251,
+                1.0
+              ]
+            },
+            "trials_with_command_failure": 0,
+            "median_end_to_end_seconds": 31.711,
+            "usage_totals": {
+              "input_tokens": 133661,
+              "cached_input_tokens": 100480,
+              "output_tokens": 538
+            },
+            "usage_available_trials": 6
+          }
+        }
+      }
+    },
+    "context": {
+      "gpt-5.6-sol": {
+        "valid_trials": 67,
+        "shared_base_text_matches": 67,
+        "base_profiles": [
+          [
+            "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+          ]
+        ],
+        "normalized_developer_profiles": [
+          [
+            "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+            "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+            "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+          ]
+        ],
+        "developer_lengths": [
+          [
+            9923,
+            2335,
+            307
+          ]
+        ]
+      },
+      "gpt-6-astra": {
+        "valid_trials": 66,
+        "shared_base_text_matches": 66,
+        "base_profiles": [
+          [
+            "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+          ]
+        ],
+        "normalized_developer_profiles": [
+          [
+            "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+            "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+            "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+          ]
+        ],
+        "developer_lengths": [
+          [
+            11305,
+            2501,
+            307
+          ]
+        ]
+      }
+    },
+    "trace_audit": {
+      "status": "single-assistant audit; not independent or blinded",
+      "groups": {
+        "gpt-5.6-sol/no_code": {
+          "observed": 21,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-6-astra/code_preferred": {
+          "observed": 21,
+          "programs_authored": 21,
+          "executions_confirmed": 21
+        },
+        "gpt-6-astra/neutral": {
+          "observed": 22,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-6-astra/no_code": {
+          "observed": 23,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        },
+        "gpt-5.6-sol/code_preferred": {
+          "observed": 22,
+          "programs_authored": 22,
+          "executions_confirmed": 22
+        },
+        "gpt-5.6-sol/neutral": {
+          "observed": 24,
+          "programs_authored": 0,
+          "executions_confirmed": 0
+        }
+      },
+      "proxy_disagreement_ids": [],
+      "languages": {
+        "python": 46,
+        "python/javascript": 1
+      },
+      "purposes": {
+        "direct_answer": 96,
+        "solve_or_verify": 47,
+        "infrastructure_failure": 1
+      }
+    }
+  }
+}

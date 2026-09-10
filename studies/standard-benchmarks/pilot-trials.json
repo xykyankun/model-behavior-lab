@@ -1,0 +1,1890 @@
+[
+  {
+    "id": "t0001",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-6-astra",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 21.899,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "0bd9b457499e7a3cd53df9f78e58aebc40f2cebe3746a427399bc343a35c335c",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11061,
+      "cached_input_tokens": 6016,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 35,
+      "reasoning_output_tokens": 25
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:55:57.128Z",
+    "finished_at": "2026-09-10T09:56:10.578Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0002",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-6-astra",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 23.627,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "ec2636f49ec03872a34a793cd6d217b0a118d93b54a188a7fa687f74bd35be85",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11065,
+      "cached_input_tokens": 7040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 77,
+      "reasoning_output_tokens": 43
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:57:24.565Z",
+    "finished_at": "2026-09-10T09:57:36.870Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0003",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-6-astra",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 24.962,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "92e10e530ceb8b434915a70f360614f8057d69b1c55e499da5d007a3472f63f5",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11075,
+      "cached_input_tokens": 7040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 137,
+      "reasoning_output_tokens": 57
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "Let Anne have \\(x\\) books. Sofie has \\(x+25\\), and Fawn has \\(x+12\\).\n\n\\(x+(x+25)+(x+12)=85\\), so \\(3x=48\\) and \\(x=16\\).\n\nFawn has \\(16+12=28\\) books.\n\nFINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:57:48.155Z",
+    "finished_at": "2026-09-10T09:58:05.266Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0004",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-5.6-sol",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 24.906,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "ed54cdbab06a0a03ae83ffe29d6463e0459e2ce4acb79d07681fb048efe00479",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10377,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 123,
+      "reasoning_output_tokens": 89
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:58:13.142Z",
+    "finished_at": "2026-09-10T09:58:27.769Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0005",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-5.6-sol",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 23.091,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "73d3e860041c9719e7e49a2df90c72d6e42ff5e1a9cb1f1b914a152d52a05b67",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10370,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 63,
+      "reasoning_output_tokens": 33
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "1 + 1 + 2 + 1 + 5 + 1 = 11\n\nFINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:58:38.053Z",
+    "finished_at": "2026-09-10T09:58:53.459Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0006",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-6-astra",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 34.921,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "be0740e2eeb7c192069a0cce8def9f4ebef2b08996d6c1ec42b82ecce272e4a4",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 22447,
+      "cached_input_tokens": 18048,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 134,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom itertools import permutations\\norders = [p for p in permutations(['owl', 'crow', 'cardinal']) if p.index('crow') < p.index('owl') and p[1] == 'owl']\\nassert len(orders) == 1\\nlabels = {'owl': '(A)', 'crow': '(B)', 'cardinal': '(C)'}\\nprint(labels[orders[0][1]])\\nPY\",\"max_output_tokens\":1000}));\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom itertools import permutations\norders = [p for p in permutations(['owl', 'crow', 'cardinal']) if p.index('crow') < p.index('owl') and p[1] == 'owl']\nassert len(orders) == 1\nlabels = {'owl': '(A)', 'crow': '(B)', 'cardinal': '(C)'}\nprint(labels[orders[0][1]])\nPY\"",
+        "aggregated_output": "(A)\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:59:01.225Z",
+    "finished_at": "2026-09-10T09:59:19.113Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0007",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-6-astra",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 25.057,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "4b54c4db7bebdac38a8958b9b356392c3c0f462c00234884c43e5c5defd5b697",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11062,
+      "cached_input_tokens": 7040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 87,
+      "reasoning_output_tokens": 53
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T09:59:36.116Z",
+    "finished_at": "2026-09-10T09:59:51.095Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0008",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-5.6-sol",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 23.646,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "21b138564104a51859b99ea9af506180f547c07bd008842d9c705cb52a802803",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10387,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 136,
+      "reasoning_output_tokens": 51
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "Let Anne have \\(x\\) books. Then Sofie has \\(x+25\\), and Fawn has \\(x+12\\).\n\n\\[\nx+(x+25)+(x+12)=85\n\\]\n\\[\n3x+37=85 \\Rightarrow x=16\n\\]\n\nFawn has \\(16+12=28\\) books.\n\nFINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:00:01.156Z",
+    "finished_at": "2026-09-10T10:00:16.123Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0009",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-5.6-sol",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 36.18,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "5784718e2ed0bcf1cb4839a05bc21d81e5b5a0dd128c65fbfaae377913d8e69d",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 21136,
+      "cached_input_tokens": 10240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 233,
+      "reasoning_output_tokens": 20
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "The program finds the unique order: crow, owl, cardinal.\n\nFINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "const r = await tools.exec_command({\n  cmd: \"python3 - <<'PY'\\nimport itertools\\nbirds = ['owl', 'crow', 'cardinal']\\nvalid = []\\nfor order in itertools.permutations(birds):\\n    pos = {bird: order.index(bird) for bird in birds}\\n    if pos['crow'] < pos['owl'] and pos['owl'] == 1:\\n        valid.append(order)\\nprint(valid)\\nprint('second:', {order[1] for order in valid})\\nPY\",\n  workdir: \"<WORKSPACE>\",\n  yield_time_ms: 10000,\n  max_output_tokens: 2000\n});\ntext(r.output);"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\nimport itertools\nbirds = ['owl', 'crow', 'cardinal']\nvalid = []\nfor order in itertools.permutations(birds):\n    pos = {bird: order.index(bird) for bird in birds}\n    if pos['crow'] < pos['owl'] and pos['owl'] == 1:\n        valid.append(order)\nprint(valid)\nprint('second:', {order[1] for order in valid})\nPY\"",
+        "aggregated_output": "[('crow', 'owl', 'cardinal')]\nsecond: {'owl'}\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:00:24.780Z",
+    "finished_at": "2026-09-10T10:00:47.917Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0010",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-6-astra",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 35.012,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "223293c9aa4097ed246b0845640b9e6349095edc8a536440f6bc957e80ed5094",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 22210,
+      "cached_input_tokens": 17920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 66,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "const result = await tools.exec_command({cmd:\"python3 -c 'print(sum([1, 1, 2, 1, 5, 1]))'\",\"max_output_tokens\":100});\ntext(result.output.trim());\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 -c 'print(sum([1, 1, 2, 1, 5, 1]))'\"",
+        "aggregated_output": "11\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:01:01.040Z",
+    "finished_at": "2026-09-10T10:01:19.829Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0011",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-5.6-sol",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 25.975,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "cc0af63de20f5630ded6b29acd0fc2b89d4f5f6b4fdf0775e9f04bfbfa750da7",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10374,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 133
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:01:36.079Z",
+    "finished_at": "2026-09-10T10:01:53.835Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0012",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-5.6-sol",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 25.396,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "6f88de1b4706e7be881a8f0526bc839335c18cbf03464484af1dede57cb06485",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10373,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 66,
+      "reasoning_output_tokens": 36
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "1 + 1 + 2 + 1 + 5 + 1 = 11\n\nFINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:02:02.024Z",
+    "finished_at": "2026-09-10T10:02:16.366Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0013",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-5.6-sol",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 20.741,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "e2c9b98713815b583134cac5c27fb1aec75982eb304412edd56c87653deb5846",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10437,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 21,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "The owl is explicitly stated to be second from the left.\n\nFINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:02:27.406Z",
+    "finished_at": "2026-09-10T10:02:40.335Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0014",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-5.6-sol",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 29.895,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "c9706575620ce2f64b30291c965080b4a187744fa2ad0e5824e0d5bccca32dbc",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 20905,
+      "cached_input_tokens": 16896,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 136,
+      "reasoning_output_tokens": 15
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\ncounts = [1, 1, 2, 1, 5, 1]\\nprint(sum(counts))\\nPY\",\"workdir\":\"<WORKSPACE>\",\"yield_time_ms\":10000,\"max_output_tokens\":1000}); text(r.output);\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\ncounts = [1, 1, 2, 1, 5, 1]\nprint(sum(counts))\nPY\"",
+        "aggregated_output": "11\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:02:48.185Z",
+    "finished_at": "2026-09-10T10:03:04.905Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0015",
+    "case": "bbh_object_counting_0014",
+    "model": "gpt-6-astra",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_object_counting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 20.127,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "dbbf171e93d29abbbe303ca9eb4e9753095cc8d9aa6de4230265f8d165311a5b",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11058,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 34,
+      "reasoning_output_tokens": 24
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: 11",
+    "parsed_answer": "11",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:03:18.054Z",
+    "finished_at": "2026-09-10T10:03:30.352Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0016",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-6-astra",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 20.233,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "15fafa18357c9d129b504f01017354472ad4a91b0ff5017236b1e02fb3f1b523",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11125,
+      "cached_input_tokens": 7040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:03:38.152Z",
+    "finished_at": "2026-09-10T10:03:49.728Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0017",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-5.6-sol",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 24.868,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "8d3424b14a8b6753eca11c3f8db0edc1fc7dc2eaf5cd02fddca9a30881cdbc70",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10384,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 138,
+      "reasoning_output_tokens": 51
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "Let Anne have \\(x\\) books. Then Sofie has \\(x+25\\), and Fawn has \\(x+12\\).\n\n\\[\nx+(x+25)+(x+12)=85\n\\]\n\n\\[\n3x+37=85 \\Rightarrow x=16\n\\]\n\nThus, Fawn has \\(16+12=28\\) books.\n\nFINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:03:58.480Z",
+    "finished_at": "2026-09-10T10:04:13.055Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0018",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-6-astra",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 15.06,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "4161a3c88e75de3104713440b03c3b0e074a6e8b4100c5976f7e21a1d5e32e77",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11128,
+      "cached_input_tokens": 7040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 23,
+      "reasoning_output_tokens": 12
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:04:23.319Z",
+    "finished_at": "2026-09-10T10:04:35.316Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0019",
+    "case": "bbh_logical_deduction_three_objects_0043",
+    "model": "gpt-5.6-sol",
+    "condition": "no_code",
+    "repeat": 1,
+    "category": "bbh_logical_deduction_three_objects",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 25.02,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "7c1c8f9abbcffb2f3b5559d6a583b1f1ffc7a780897a7472ab93e65b73b294fb",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 10440,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 21,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "The owl is explicitly stated to be second from the left.\n\nFINAL: (A)",
+    "parsed_answer": "(A)",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:04:38.266Z",
+    "finished_at": "2026-09-10T10:04:51.694Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0020",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-6-astra",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 27.212,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "aa11a194aca6b2a9870371f394adc254ec3abde42c99da3e67a1c766d5b2572d",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 22295,
+      "cached_input_tokens": 17920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 109,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nwords = 'dove rodriguez sonant monaco strap horticulture claret play paschal bizarre valuate colonist baden deplore'.split()\\nprint(' '.join(sorted(words)))\\nPY\",\"max_output_tokens\":200}));\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\nwords = 'dove rodriguez sonant monaco strap horticulture claret play paschal bizarre valuate colonist baden deplore'.split()\nprint(' '.join(sorted(words)))\nPY\"",
+        "aggregated_output": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:05:03.381Z",
+    "finished_at": "2026-09-10T10:05:19.359Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0021",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-6-astra",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 27.714,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "1d2887bddc2d7a5f74a25bf4da9fa8940a49b4a1d582f48cfefcd826c01296e4",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 22301,
+      "cached_input_tokens": 17920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 96,
+      "reasoning_output_tokens": 0
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfor fawn in range(86):\\n    anne = fawn - 12\\n    sofie = anne + 25\\n    if anne >= 0 and sofie + anne + fawn == 85:\\n        print(fawn)\\nPY\",\"max_output_tokens\":1000}));\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\nfor fawn in range(86):\n    anne = fawn - 12\n    sofie = anne + 25\n    if anne >= 0 and sofie + anne + fawn == 85:\n        print(fawn)\nPY\"",
+        "aggregated_output": "28\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:05:30.590Z",
+    "finished_at": "2026-09-10T10:05:49.882Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  },
+  {
+    "id": "t0022",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-5.6-sol",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 30.999,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "c5bc9325a0da21256052255a82a88c226ab2ad1f70ad5226ea4c16d29e774621",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 20989,
+      "cached_input_tokens": 16896,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 260,
+      "reasoning_output_tokens": 28
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "Let Anne have \\(a\\) books. Then Sofie has \\(a+25\\), and Fawn has \\(a+12\\).\n\n\\[\na+(a+25)+(a+12)=85\n\\]\n\nThe executed program verified that \\(a=16\\), so Fawn has \\(16+12=28\\).\n\nFINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\n# Let Anne = a; Sofie = a + 25; Fawn = a + 12.\\ntotal = 85\\na = (total - 25 - 12) // 3\\nfawn = a + 12\\nassert (a + 25) + a + fawn == total\\nprint(fawn)\\nPY\",\"workdir\":\"<WORKSPACE>\",\"yield_time_ms\":10000,\"max_output_tokens\":1000}); text(r.output);"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\n# Let Anne = a; Sofie = a + 25; Fawn = a + 12.\ntotal = 85\na = (total - 25 - 12) // 3\nfawn = a + 12\nassert (a + 25) + a + fawn == total\nprint(fawn)\nPY\"",
+        "aggregated_output": "28\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:05:58.305Z",
+    "finished_at": "2026-09-10T10:06:20.823Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0023",
+    "case": "bbh_word_sorting_0240",
+    "model": "gpt-5.6-sol",
+    "condition": "code_preferred",
+    "repeat": 1,
+    "category": "bbh_word_sorting",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 34.772,
+    "observed_models": [
+      "gpt-5.6-sol"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "947bebfb0c4be199b8dd749912fdf6d5efb1438ae03c7bb4f52d4358df1eda4b",
+      "dcb54c94ea055a45054db60432a6ab742b1bb23bc0e50fa412e43b8eaf4e05c0",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 20950,
+      "cached_input_tokens": 10240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 173,
+      "reasoning_output_tokens": 18
+    },
+    "inline_script": true,
+    "awk_code": false,
+    "aux_code_with_awk": true,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "FINAL: baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "parsed_answer": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [
+      {
+        "name": "exec",
+        "body": "const r = await tools.exec_command({cmd: \"python3 - <<'PY'\\nwords = 'dove rodriguez sonant monaco strap horticulture claret play paschal bizarre valuate colonist baden deplore'.split()\\nprint(' '.join(sorted(words)))\\nPY\", workdir: \"<WORKSPACE>\", yield_time_ms: 10000});\ntext(r.output);\n"
+      }
+    ],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [
+      {
+        "command": "/bin/zsh -lc \"python3 - <<'PY'\nwords = 'dove rodriguez sonant monaco strap horticulture claret play paschal bizarre valuate colonist baden deplore'.split()\nprint(' '.join(sorted(words)))\nPY\"",
+        "aggregated_output": "baden bizarre claret colonist deplore dove horticulture monaco paschal play rodriguez sonant strap valuate\n",
+        "exit_code": 0,
+        "status": "completed"
+      }
+    ],
+    "tool_names": [
+      "exec"
+    ],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:06:29.339Z",
+    "finished_at": "2026-09-10T10:06:50.529Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "67840f29d8b363c5a51f91df55b47af71407e96a9d5fb21d349f5060e81bd6d2",
+      "0711fc5a26dc3b7d4fafb8dccaed204847e17d55cbcf6bd4209943704f796aa3",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      9923,
+      2335,
+      307
+    ]
+  },
+  {
+    "id": "t0024",
+    "case": "gsm8k_test_0866",
+    "model": "gpt-6-astra",
+    "condition": "neutral",
+    "repeat": 1,
+    "category": "gsm8k_test",
+    "status": "finished",
+    "exit_code": 0,
+    "valid": true,
+    "launch_error": null,
+    "reconstructed_from_launch_exception": null,
+    "version_scope": null,
+    "plan_sha256": "3408bee1cb533e9d6e11011d63be85509323cfe0fb61e096707839047a548722",
+    "cli_version": "codex-cli 0.153.4",
+    "sandbox": "workspace-write",
+    "seconds": 24.658,
+    "observed_models": [
+      "gpt-6-astra"
+    ],
+    "complete": true,
+    "raw_complete": true,
+    "malformed_lines": 0,
+    "base_hashes": [
+      "f0dbeec10da8c257e3b1bf3e46b5fd60f70968ea0f30c70f13fbe431a8fc177c"
+    ],
+    "developer_hashes": [
+      "4d729ec27ad4f20243bd6e79a09255396c753aa73eb7ce36f1d633ee18b829cc",
+      "3c29d434679f6abc94b191851fb84cf5b5266c48b21286acb9faffae737fe47d",
+      "776f0082c690841a8a00bebf40ec1f979f849af29ddcbd6a849b9fcfce6edbc3"
+    ],
+    "metric_version": "inline-interpreter-awk-v1",
+    "usage": {
+      "input_tokens": 11072,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 105,
+      "reasoning_output_tokens": 26
+    },
+    "inline_script": false,
+    "awk_code": false,
+    "aux_code_with_awk": false,
+    "correct": true,
+    "format_compliant": true,
+    "answer": "Let Anne have \\(x\\) books. Then Sofie has \\(x+25\\), and Fawn has \\(x+12\\).\n\n\\(x+(x+25)+(x+12)=85\\), so \\(3x=48\\) and \\(x=16\\).\n\nFawn has \\(16+12=28\\).\n\nFINAL: 28",
+    "parsed_answer": "28",
+    "executable_phase": "npm-0.153.4-preflight",
+    "calls": [],
+    "telemetry_valid": true,
+    "infrastructure_diagnostics": [],
+    "exclusion_reason": null,
+    "command_events": [],
+    "tool_names": [],
+    "session_cli_version": "0.153.4",
+    "started_at": "2026-09-10T10:07:04.126Z",
+    "finished_at": "2026-09-10T10:07:18.077Z",
+    "base_text_matches_protocol": true,
+    "observed_efforts": [
+      "high"
+    ],
+    "observed_sandbox_types": [
+      "workspace-write"
+    ],
+    "normalized_developer_hashes": [
+      "707bae91279b1680038f707eecca3928d9472077ea6921dec9a9eea2568dfc04",
+      "4ce49f19413d6ea4053db9350b8bbe40ca8eddb42d72364fda7dbf8b88a50629",
+      "8b68d0afeb389be99bbd062fd7b13666a088edf4a8efca106ca37ff9b182a4f0"
+    ],
+    "developer_lengths": [
+      11305,
+      2501,
+      307
+    ]
+  }
+]

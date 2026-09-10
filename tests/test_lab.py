@@ -97,6 +97,15 @@ class TelemetryTests(unittest.TestCase):
         missing_context[0]["payload"] = {}
         self.assertFalse(collect(events, missing_context, "a", 0)["valid"])
 
+    def test_unavailable_tool_host_is_not_a_valid_zero(self):
+        events = [{"type":"turn.completed"}, {"type":"item.completed", "item":{
+            "type":"error", "message":"Code Mode is unavailable because the host executable was not found."}}]
+        result = collect(events, self.raw(), "a", 0)
+        self.assertFalse(result["valid"])
+        self.assertIsNone(result["aux_code_with_awk"])
+        events[1]["item"]["message"] = "Under-development features enabled: skip_host_skill_discovery."
+        self.assertTrue(collect(events, self.raw(), "a", 0)["valid"])
+
     def test_nested_transport_exclusion_and_language_sensitivity(self):
         def score(body):
             return candidates([{"name": "functions.exec", "body": body}])
@@ -134,6 +143,21 @@ class RunnerIntegrationTests(unittest.TestCase):
             rowpath.write_text(json.dumps(altered))
             with self.assertRaises(ValueError):
                 load_results(root / "results")
+
+    def test_launch_failure_is_a_missing_observation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            seal(ProtocolTests().spec(), root / "plan.json")
+            fake = root / "fake-codex"
+            fake.write_text('#!/bin/sh\nif [ "$1" = "--version" ]; then echo fake; rm -- "$0"; exit 0; fi\nexit 1\n')
+            fake.chmod(0o700)
+            run_plan(root / "plan.json", root / "results", max_runs=1, codex=str(fake))
+            row = load_results(root / "results")[0]
+            self.assertEqual(row["status"], "launch_error")
+            self.assertEqual(row["launch_error"]["errno"], 2)
+            self.assertFalse(row["valid"])
+            self.assertIsNone(row["aux_code_with_awk"])
+            self.assertFalse((root / "results/runner.lock").exists())
 
     def test_timeout_and_lock(self):
         with tempfile.TemporaryDirectory() as tmp:

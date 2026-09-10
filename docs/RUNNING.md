@@ -59,3 +59,17 @@ record the environment or extract credentials.
 Setting ignore flags does **not** guarantee that global instructions, host skills
 or model-specific tool descriptions disappear. Inspect actual context hashes and
 local traces. API-native equal-input experiments and Inspect adapters are future work.
+
+## Runtime integrity
+
+Pin a complete CLI distribution, including its adjacent helpers such as
+`codex-code-mode-host`. Copying only the main executable can leave ordinary
+answers working while code execution fails. Check an actual command execution,
+not just `--version` or a correct text answer. Record the version from each
+session as well as the initial version check.
+
+A `Code Mode is unavailable` startup diagnostic invalidates the trial even when
+its final answer is correct and it makes no tool call. A missing executable is
+recorded as `launch_error`, with null behavioral metrics. Repair the runtime,
+retain affected records and document the interruption; do not turn missing tool
+access into evidence of a model choosing not to code.

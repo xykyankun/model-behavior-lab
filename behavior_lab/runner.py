@@ -56,12 +56,16 @@ def collect(events, raw, requested_model, returncode, malformed=0):
     complete = any(e.get("type") == "turn.completed" for e in events)
     raw_complete = any(e.get("type") == "event_msg" and
                        e.get("payload", {}).get("type") in ("task_complete", "task_completed") for e in raw)
-    valid = (returncode == 0 and complete and raw_complete and malformed == 0 and
+    infrastructure_errors = [e["item"]["message"] for e in events
+                             if e.get("item", {}).get("type") == "error" and
+                             "Code Mode is unavailable" in e["item"].get("message", "")]
+    valid = (not infrastructure_errors and returncode == 0 and complete and raw_complete and malformed == 0 and
              bool(models) and set(models) == {requested_model} and bool(bases))
     metrics = candidates(calls) if valid else {k: None for k in ("inline_script", "awk_code", "aux_code_with_awk")}
     usage = next((e.get("usage") for e in reversed(events) if e.get("type") == "turn.completed"), None)
     return {"valid": valid, "observed_models": sorted(set(models), key=str),
             "complete": complete, "raw_complete": raw_complete, "malformed_lines": malformed,
+            "infrastructure_errors": infrastructure_errors,
             "base_hashes": bases, "developer_hashes": developers, "calls": calls,
             "metric_version": METRIC_VERSION, "usage": usage, **metrics}
 
@@ -119,31 +123,36 @@ def run_plan(plan_path, output, max_runs=1, codex="codex", external_sandbox=Fals
             (trial / "shell").mkdir()
             env["ZDOTDIR"] = str(trial / "shell")
             start = time.monotonic()
-            status, rc = "finished", None
+            status, rc, launch_error = "finished", None, None
             with (trial / "events.jsonl").open("w") as out, (trial / "stderr.log").open("w") as err:
-                p = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=out, stderr=err, env=env,
-                                     text=True, start_new_session=True)
                 try:
-                    p.communicate(case["prompt"] + cond.get("user_suffix", ""),
-                                  timeout=plan["spec"]["timeout_seconds"])
-                    rc = p.returncode
-                    if rc != 0:
-                        status = "error"
-                except (subprocess.TimeoutExpired, KeyboardInterrupt) as exc:
+                    p = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=out, stderr=err, env=env,
+                                         text=True, start_new_session=True)
+                except OSError as exc:
+                    status = "launch_error"
+                    launch_error = {"type": type(exc).__name__, "errno": exc.errno}
+                else:
                     try:
-                        os.killpg(p.pid, signal.SIGKILL)
-                    except ProcessLookupError:
-                        pass
-                    p.communicate()
-                    status = "timeout" if isinstance(exc, subprocess.TimeoutExpired) else "interrupted"
-                    rc = p.returncode
+                        p.communicate(case["prompt"] + cond.get("user_suffix", ""),
+                                      timeout=plan["spec"]["timeout_seconds"])
+                        rc = p.returncode
+                        if rc != 0:
+                            status = "error"
+                    except (subprocess.TimeoutExpired, KeyboardInterrupt) as exc:
+                        try:
+                            os.killpg(p.pid, signal.SIGKILL)
+                        except ProcessLookupError:
+                            pass
+                        p.communicate()
+                        status = "timeout" if isinstance(exc, subprocess.TimeoutExpired) else "interrupted"
+                        rc = p.returncode
             events, errors = jsonl(trial / "events.jsonl")
             tid = next((e.get("thread_id") for e in events if e.get("type") == "thread.started"), None)
             home = Path(env.get("CODEX_HOME", str(Path.home() / ".codex")))
             rollout = find_rollout(tid, home) if tid else None
             raw, raw_errors = jsonl(rollout) if rollout else ([], 0)
             result = {**job, "category": case.get("category", "unspecified"),
-                      "status": status, "exit_code": rc, "plan_sha256": plan["sha256"],
+                      "status": status, "exit_code": rc, "launch_error": launch_error, "plan_sha256": plan["sha256"],
                       "cli_version": version, "platform": platform.platform(), "sandbox": sandbox,
                       "seconds": round(time.monotonic() - start, 3), "argv": argv,
                       "thread_id": tid, "rollout_path": str(rollout) if rollout else None,

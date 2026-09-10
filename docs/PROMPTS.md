@@ -51,7 +51,8 @@ response, not proof that the model naturally prefers coding.
 The shared base is only one part of a Codex request. Host developer instructions,
 tool descriptions, model routing and server-side behavior may differ. The runner
 records effective base/developer hashes and requested/observed model IDs from the
-actual trial. Equal CLI flags are not proof of equal requests or fixed weights.
+actual trial. Equal CLI flags are not proof of equal requests or fixed weights. The model IDs
+come from CLI context records, not independent backend weight attestation.
 No personal conversation history is used as a dataset or evidence source.
 
 To identify a model-weight effect, use a separate API-native replication with
