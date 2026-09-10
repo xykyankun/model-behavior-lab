@@ -1,0 +1,72 @@
+[
+  {
+    "file": "gsm8k.jsonl",
+    "repo": "openai/grade-school-math",
+    "commit": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "path": "grade_school_math/data/test.jsonl",
+    "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "bytes": 749738,
+    "dataset": "gsm8k",
+    "id": "gsm8k_test",
+    "split": "test",
+    "answer_kind": "number",
+    "count": 1319
+  },
+  {
+    "file": "gsm8k.LICENSE",
+    "repo": "openai/grade-school-math",
+    "commit": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "path": "LICENSE",
+    "sha256": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "bytes": 1062,
+    "kind": "license"
+  },
+  {
+    "file": "word_sorting.json",
+    "repo": "suzgunmirac/BIG-Bench-Hard",
+    "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+    "path": "bbh/word_sorting.json",
+    "sha256": "2a6132d2c99f00d0d2eb1113ac6b4a918bd969d863c48749210d969713db8d43",
+    "bytes": 66300,
+    "dataset": "bbh",
+    "id": "bbh_word_sorting",
+    "split": "published_evaluation_examples",
+    "answer_kind": "words",
+    "count": 250
+  },
+  {
+    "file": "object_counting.json",
+    "repo": "suzgunmirac/BIG-Bench-Hard",
+    "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+    "path": "bbh/object_counting.json",
+    "sha256": "8acef14dbbdd40d2326ef7755750b6b5fe919fef06276af1bab3f1c297f022ff",
+    "bytes": 35890,
+    "dataset": "bbh",
+    "id": "bbh_object_counting",
+    "split": "published_evaluation_examples",
+    "answer_kind": "number",
+    "count": 250
+  },
+  {
+    "file": "logical_deduction_three_objects.json",
+    "repo": "suzgunmirac/BIG-Bench-Hard",
+    "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+    "path": "bbh/logical_deduction_three_objects.json",
+    "sha256": "e590fae72e3a6041fbd23bd8ff6b74baf44ca563f6ba40a041c55e7b867c1681",
+    "bytes": 112213,
+    "dataset": "bbh",
+    "id": "bbh_logical_deduction_three_objects",
+    "split": "published_evaluation_examples",
+    "answer_kind": "choice",
+    "count": 250
+  },
+  {
+    "file": "bbh.LICENSE",
+    "repo": "suzgunmirac/BIG-Bench-Hard",
+    "commit": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+    "path": "LICENSE",
+    "sha256": "4ef2ff4295d26ab6211235039c132697408cec5391d2c091b41e983771978db8",
+    "bytes": 1068,
+    "kind": "license"
+  }
+]

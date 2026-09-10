@@ -1,4 +1,4 @@
-"""Codex CLI adapter. Runs trusted synthetic fixtures; logs are PRIVATE."""
+"""Codex CLI adapter. Runs reviewed benchmark tasks; logs are PRIVATE."""
 
 import json
 import os
@@ -11,6 +11,7 @@ from pathlib import Path
 
 from .metrics import METRIC_VERSION, candidates
 from .protocol import digest, load_plan, safe_relative
+from .benchmarks import score_answer
 
 
 def jsonl(path):
@@ -147,6 +148,11 @@ def run_plan(plan_path, output, max_runs=1, codex="codex", external_sandbox=Fals
                       "seconds": round(time.monotonic() - start, 3), "argv": argv,
                       "thread_id": tid, "rollout_path": str(rollout) if rollout else None,
                       **collect(events, raw, job["model"], rc, errors + raw_errors)}
+            answer_path = trial / "answer.txt"
+            result["answer"] = answer_path.read_text(encoding="utf-8") if answer_path.exists() else ""
+            if "answer_kind" in case:
+                result.update(score_answer(result["answer"], case) if result["valid"] else
+                              {"correct": None, "format_compliant": None, "parsed_answer": None})
             (trial / "result.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             print(json.dumps({k: result[k] for k in ("id", "status", "valid", "seconds")}), flush=True)
             count += 1

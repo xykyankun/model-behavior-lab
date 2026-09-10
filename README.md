@@ -1,85 +1,79 @@
 # Model Behavior Lab
 
-把对模型的直觉，变成可以复算、反驳和改进的实验。
+Reproducible experiments about how models solve tasks: method choice, instruction
+following, correctness, and resource use. English-only research materials, public
+benchmark data, and explicit prompt interventions. Python 3.9+.
 
-An open research workbench for observable model behavior: protocols, matched tasks,
-tool traces, counterexamples, uncertainty, and explicit limits on conclusions.
-Python 3.9+; offline analysis has no third-party dependencies.
+**First question: Does GPT-6 Astra use more auxiliary code than GPT-5.6 Sol?**
+The repository defines a testable protocol; it does not assume the answer.
+No personal conversations or locally collected chat-history datasets are used.
 
-**First study: Does GPT-6 use more code to solve problems?**
+## Public benchmark sources
 
-We observed more auxiliary-program candidates in GPT-6 Astra than GPT-5.6 Sol in
-one user's Codex environment. The 84 synthetic trials do **not** establish a
-general, model-intrinsic difference: tasks are few, prompts differ, and the
-task-level exploratory test is inconclusive. Writing more code is not itself a
-quality failure. These are local model identifiers, not an official benchmark.
+| Source | Available examples | Task |
+|---|---:|---|
+| [GSM8K test](https://github.com/openai/grade-school-math) | 1,319 | Arithmetic word problems |
+| [BBH word sorting](https://github.com/suzgunmirac/BIG-Bench-Hard) | 250 | Lexicographic sorting |
+| BBH object counting | 250 | Category counting |
+| BBH logical deduction, three objects | 250 | Relational reasoning |
 
-| Evidence | GPT-5.6 Sol | GPT-6 Astra | What it supports |
-|---|---:|---:|---|
-| Completed historical turns | 241 / 1,500 (16.1%) | 50 / 133 (37.6%) | Observational association; private source corpus |
-| Synthetic default condition | 7 / 32 (21.9%) | 12 / 32 (37.5%) | Difference on 16 selected tasks; paired exploratory p = .25 |
-| Text / discussion / planning subset | 0 / 16 | 0 / 16 | Counterevidence to an indiscriminate coding tendency |
-| File-reading / explanation subset | 2 / 8 | 4 / 8 | Difference concentrated in some file tasks |
-| Small-edit subset | 3 / 6 | 6 / 6 | Additional validation programs were common |
+Source commits and SHA-256 checksums are pinned in
+[the source manifest](behavior_lab/sources.json). Both upstream repositories use
+MIT licenses; copies are in [third_party](third_party).
 
-Metric includes inline Python/Node/Ruby/Perl and awk candidates, **not all
-programming**. In the CSV task both models wrote programs: Sol used awk, Astra
-used Python. Treating awk as “no code” exaggerates the difference.
+These are standard **datasets**, evaluated through an **adapted zero-shot,
+tool-enabled protocol**. The scores are not directly comparable to official
+GSM8K/BBH scores, including BBH's few-shot chain-of-thought setup. Public benchmarks
+may also have appeared in training data.
 
-Read the [完整中文研究报告](studies/code-propensity-2026-09/REPORT.zh-CN.md),
-[methodology](docs/METHODOLOGY.md), and [data card](studies/code-propensity-2026-09/DATA_CARD.md).
+## Prompt experiment
 
-## Reproduce the published evidence offline
+Every selected question is paired across two models and three method instructions:
+
+| Condition | Exact method instruction | Interpretation |
+|---|---|---|
+| `neutral` | Choose the method you consider appropriate. | Spontaneous method choice |
+| `no_code` | Solve without writing or executing any task-specific program. | No-code instruction following |
+| `code_preferred` | Write and execute a short program to solve or verify the answer. | Positive control for code use |
+
+All arms share the same question, answer-format instruction, base instruction and
+reasoning setting. Effective host/tool context is recorded by hash and may still
+differ between models. See [prompt analysis](docs/PROMPTS.md) and
+[methodology](docs/METHODOLOGY.md) for causal limits.
+
+## Reproduce or extend
 
 ```bash
-git clone https://github.com/xykyankun/model-behavior-lab.git
-cd model-behavior-lab
 python3 -m unittest discover -s tests -v
-python3 studies/code-propensity-2026-09/reproduce.py --check
-python3 -m behavior_lab analyze studies/code-propensity-2026-09/trials.json \
-  --condition default --models gpt-5.6-sol gpt-6-astra --exclude-controls
-```
-
-This recomputes metrics and task-level statistics from the 84 published synthetic
-trial records. It does not contact a model or reconstruct private history.
-The historical aggregates cannot be independently rederived from this repository.
-
-## Run a new experiment
-
-```bash
+python3 studies/standard-benchmarks/verify.py
 mkdir -p private-runs
-python3 -m behavior_lab plan \
-  studies/code-propensity-2026-09/replication-spec.json private-runs/plan.json
+python3 -m behavior_lab fetch private-runs/cache
+python3 -m behavior_lab benchmark-plan private-runs/cache private-runs/plan.json \
+  --models gpt-5.6-sol gpt-6-astra --per-source 25 --repeats 1
 python3 -m behavior_lab run private-runs/plan.json private-runs/results --max-runs 1
 ```
 
-Planning makes no model calls. Running requires a logged-in, compatible Codex
-CLI and consumes your usage. Start with one infrastructure check; the included
-replication specification schedules **48 attempts**, not 48 completed results.
-Its data has **not** been collected. The default limit is one attempt per command;
-raise `--max-runs` to continue. Completed failures are retained and skipped on resume.
+Planning makes no model calls. Running uses your local Codex login and consumes
+usage. The example above schedules 600 attempts; the runner executes at most one
+per invocation unless you explicitly raise `--max-runs`. `--per-source 0` selects
+all 2,069 examples: 12,414 attempts for two models, three prompts and one repeat.
+Do not treat these planned counts as completed experiments. Inspect the first
+trial before continuing; [RUNNING.md](docs/RUNNING.md) shows how to resume and
+analyze complete matched pairs.
 
-The runner uses `workspace-write` and trusted synthetic fixtures. Its logs remain
-private and can contain host instructions and paths. Read [RUNNING.md](docs/RUNNING.md)
-before running agents. The `--externally-sandboxed` option is only for an already
-isolated parent/container that cannot install a nested sandbox; it is not a
-general troubleshooting switch.
+A [24-attempt pilot protocol](studies/standard-benchmarks/protocol.json) selects
+one question per source. It is an infrastructure/prompt manipulation check, far
+too small for a population-level model comparison. Study status and any collected
+results are documented in [the study card](studies/standard-benchmarks/README.md).
 
-## What exists today
+The primary automatic behavior measure is a versioned inline interpreter/awk
+**candidate proxy**, not a complete semantic measure of all programming.
+Correctness and output-format compliance are separate fields. More code is not
+inherently better or worse. Missing telemetry is not scored as “no code”.
 
-- Content-hashed, randomized plans and opaque trial directories.
-- A Codex CLI adapter with timeout handling, model/context hashes and missing-data checks.
-- Stable lexical proxies, paired task bootstrap intervals and sign-flip sensitivity tests.
-- Synthetic prompts, fixtures, 84 answers and tool inputs, provenance and checksums.
-- An exploratory case study, counterexamples and a prospective replication specification.
+Read [RUNNING.md](docs/RUNNING.md) before executing agents. Raw logs remain private;
+public results must exclude host instructions, credentials and local paths.
+For larger-scale execution, consider [Inspect](https://inspect.aisi.org.uk/).
+Contributions and null findings are welcome: [CONTRIBUTING.md](CONTRIBUTING.md).
 
-This is a research workbench, not a model ranking site. API-native adapters,
-independent blinded annotation, causal prompt ablations and broad held-out task
-sets are future work. See [CONTRIBUTING.md](CONTRIBUTING.md) to add another hypothesis.
-
-For large agent evaluations, [Inspect](https://inspect.aisi.org.uk/) already
-provides execution, logging and scoring infrastructure. This small project focuses
-on the research question and local Codex traces; it does not replace Inspect or
-[HELM](https://github.com/stanford-crfm/helm).
-
-License: [MIT](LICENSE). Research results are exploratory and have not been peer reviewed.
+License: [MIT](LICENSE), with upstream notices retained. No model ranking is claimed.

@@ -2,7 +2,7 @@
 
 import re
 
-METRIC_VERSION = "legacy-2026-09-10"
+METRIC_VERSION = "inline-interpreter-awk-v1"
 SCRIPT = re.compile(
     r'(?:python[\d.]*|node|ruby|perl)\s+(?:-c\b|-e\b|-p\b|--eval\b|--print\b|-\s*<<)'
     r'|python[\d.]*\s+<<'
@@ -14,7 +14,7 @@ AWK = re.compile(r'\b(?:gawk|mawk|awk)\s')
 
 
 def candidates(calls):
-    # Keep this historical definition stable so the published study recomputes.
+    # Keep the definition versioned so each study can be recomputed.
     # Text in quoted documentation can be a false positive. No candidate is
     # automatically interpreted as unnecessary work or successful execution.
     body = "\n".join(str(x.get("body", "")) for x in calls)

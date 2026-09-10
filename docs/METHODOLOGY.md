@@ -1,97 +1,87 @@
-# 从直觉到可检验的结论
+# Methodology
 
-一个有用的模型行为实验，需要说明“测了什么”和“没有测到什么”。
-本项目的分析单位是可观察的任务行为，而不是对模型性格或训练意图的猜测。
+## Constructs and evidence
 
-## 1. 分清目标与代理指标
+Separate auxiliary programming, language choice, tool use, unrequested artifacts,
+and task quality. A tool wrapper is not necessarily task logic; Python, awk,
+JavaScript and shell programs can serve the same purpose. The automatic detector
+currently recognizes inline Python/Node/Ruby/Perl and awk candidates. It can miss
+standalone generated scripts, shell logic, SQL and in-memory JavaScript, and can
+match quoted command text. Its name and version must retain that limitation.
 
-“更倾向写代码”至少包含五个不同命题：
+Use independent, blinded annotation before claiming a complete measure of
+programming or unnecessary work. Recommended labels are program authored,
+execution attempted/succeeded, language, purpose, scope compliance, necessity and
+correctness. Calibrate two annotators on examples, report agreement and disputes,
+and validate any model judge against independent labels.
 
-| 构念 | 可观察指标 | 不能由它直接推出 |
-|---|---|---|
-| 辅助编程倾向 | 为当前任务编写或执行临时程序 | 程序不必要、结果更差 |
-| 语言偏好 | Python / awk / JS 等选择 | 总编程倾向更高 |
-| 工具使用倾向 | 工具调用、尝试与成功次数 | 所有调用都是编程 |
-| 范围扩张 | 用户未要求的持久化程序或应用产物 | 正常验证属于越权 |
-| 任务效果 | 正确性、完整性、遵循范围、时间和用量 | 单个总分适合每位用户 |
+## Dataset selection
 
-首先固定一个主要构念和主要指标；次要指标、语言敏感性、失败和反例同时报告。
-旧数据的正则只发现内联解释器和 awk 候选，不能完整测量所有编程。
-例如 shell 循环、SQL、工具包装中的实质 JS 运算、写脚本后另行执行均可能漏检；
-引用命令文本也可能误报。不要把这个代理指标重命名为“全部代码”。
+Use only public, licensed benchmark sources with pinned commits, byte checksums,
+source indices and preserved license notices. GSM8K is drawn from its test split;
+BBH uses its published evaluation examples. The selected BBH tasks cover sorting,
+counting and relational reasoning. They do not represent all non-coding work.
+Code-generation datasets would be positive controls rather than suitable primary
+data for measuring unsolicited code use.
 
-## 2. 区分产品差异与因果解释
+Sampling uses a fixed seed within each source, independently of model outputs.
+Questions are copied verbatim; method and final-answer instructions are explicit
+adaptations. Tool access and zero-shot prompting make this a dataset-backed
+behavior study, not a reproduction of a published leaderboard protocol. Benchmark
+familiarity or contamination may reduce sensitivity; harder, independently held-out
+public tasks are needed for broader claims.
 
-观察到的行为同时受模型、基础指令、开发者指令、工具列表、用户请求、历史、
-推理预算、操作系统、网络和运行时间影响。模型标签常常同时决定默认指令及工具描述。
-同题、同档位只能控制其中一部分。
+## Experimental design
 
-产品实验应保留真实配置，回答“这套配置怎么表现”。权重归因实验需要使其他输入
-真正相同，并从实际请求或完整日志核实，而不能只相信启动参数。若不可控，就将
-处理条件命名为“模型加配置”，不要声称识别了裸模型效果。
+Cross model identity with neutral, no-code and code-preferred prompts on matched
+questions. Keep the base instruction, question, format and reasoning setting
+fixed. Randomize trial order and use a fresh, opaque workspace for each attempt.
+Record the exact prompt specification and effective context hashes. Treat the
+Codex model-plus-configuration as the treatment when complete request equality
+cannot be demonstrated. See [PROMPTS.md](PROMPTS.md).
 
-合适的后续设计是模型 × 指令的交叉设计：两种模型都接收中性指令、最简方法指令
-以及鼓励代码验证的指令。逐格报告主效应和交互；完整工具/开发者上下文无法统一时，
-继续明确这一限制。提示词敏感性并不解释全部模型差异。
+Freeze the protocol before collecting results and publish its commit/hash.
+A local seal prevents accidental changes but is not independent proof of when
+an experiment was registered. Report the total scheduled, attempted, completed,
+invalid and unattempted cells. Never retain only successful or favorable runs.
 
-## 3. 采样、对照和停止规则
+## Scoring and dependence
 
-预先定义目标任务分布、纳入/排除标准、题目、重复次数、顺序种子、超时、预算、
-失败处理和主要分析。先冻结并公开协议提交，再开始确认性采集。
-本工具的 seal 仅防止意外修改，研究者仍能重建哈希；它不是独立时间戳或防作弊机制。
+Numeric answers use normalized decimal equality, choices use their exact option
+labels, and sorted words use exact sequence equality. Every valid attempt is
+scored separately for format compliance and correctness. A malformed answer is
+incorrect; failed or incomplete infrastructure is missing. Reference answers are
+not model-visible task inputs. Public reference answers can contain errors, so
+any disputed item needs a documented adjudication rather than silent relabeling.
 
-任务要覆盖直接回答、数据复杂度阶梯、文件分析、讨论、轻微修改、明确要求代码的
-正对照，以及明确禁止写程序的遵循指令对照。数字变体应聚类到题型，不能假装是
-完全独立的新题。增加独立题型与不同用户/环境，通常比重复同一道小题更有信息量。
+The analysis first averages repetitions within each question, then averages the
+paired model differences across questions. It bootstraps complete question pairs
+and performs a task-level sign-flip sensitivity test. Missing/invalid repeats
+exclude the entire question pair and are listed. A runner-directory analysis
+includes all scheduled jobs; an arbitrary JSON array cannot reveal omitted pairs.
 
-失败单列：基础设施失败、模型错误、超时、拒绝、缺失遥测不能合成“没写代码”。
-不能看完结果后补题或只重跑不喜欢的结果，再把它当成原协议结果。
+Do not confuse questions with independent task families. Analyze each dataset
+separately; any cross-dataset aggregate must specify its weights. The supplied analysis assigns equal weight
+to each question, so a full-corpus aggregate gives more weight to GSM8K. Equal
+sampling per source gives equal source weights. The statistics
+assume exchangeability of sampled questions, and the sign-flip test assumes
+symmetric difference signs under the null. Small pilots and few discordant pairs
+produce weak inference. No multiplicity correction is currently implemented;
+multiple prompts, metrics and subgroup analyses must be labeled exploratory.
 
-## 4. 标注必须独立于模型身份和期待
+Define a minimum meaningful effect and plan sample size using the paired design,
+question-family dependence and expected failure rate. Repeated runs of one easy
+question do not replace independent questions. A 24-attempt pilot with four unique
+questions is for infrastructure and manipulation checks, not a model ranking.
 
-建议两名独立标注者先用固定示例校准规则，再盲看打乱的工具输入、相关输出与产物。
-隐藏模型名和条件，但保留用户任务以判断必要性。报告一致率、Cohen's kappa（以及
-类别极不均衡对 kappa 的影响）、分歧与裁决。工具调用尝试和成功执行分开标注。
-自动模型裁判应先对独立人工标签验证，不能由被测模型自评后当作客观事实。
+## Related methods
 
-推荐逐试次字段：`auxiliary_program`、`language`、`purpose`（读取/变换/验证/产物）、
-`execution_success`、`unrequested_artifact`、`correctness`、`scope_compliance`、
-`necessity`（必要/合理可选/明显多余/不确定），附证据位置和标注者标识。
-本项目第一份数据只有同一调查助手审计的代理标签，尚无独立人工一致性数据。
+- [GSM8K / Training Verifiers](https://arxiv.org/abs/2110.14168): arithmetic questions with reference solutions; use the published test split.
+- [BIG-Bench Hard](https://arxiv.org/abs/2210.09261): a collection of challenging reasoning tasks; its original prompting protocol differs from this adaptation.
+- [PAL](https://arxiv.org/abs/2211.10435): program-aided reasoning motivates assessing code use and correctness together.
+- [HELM](https://arxiv.org/abs/2211.09110): standardized scenarios and multiple metrics motivate explicit coverage and trade-offs.
+- [Construct validity](https://arxiv.org/abs/2511.04703): motivates distinguishing lexical code candidates from the broader behavioral construct.
+- [Statistical significance in NLP](https://aclanthology.org/P18-1128/): motivates choosing a test around the actual design and measurement.
+- [AI Agents That Matter](https://arxiv.org/abs/2407.01502): motivates tracking costs, holdouts and reproducibility alongside accuracy.
 
-## 5. 统计单位与可解释性
-
-同一道题的重复运行相关，同一历史会话的轮次也相关。当前公开分析先在题内平均，
-再对同题模型差值等权平均：Δ = mean_task(rate_B − rate_A)。Bootstrap 整题重采样
-20,000 次；sign-flip 在任务层翻转差值符号，小于等于 20 个非零差值时精确枚举。
-不同条件分别计算，重复缺失或无效时排除整个题目配对并列出排除题。
-
-两个模型都缺失的计划题不能从结果行中发现，因此分析前还要与完整计划核对。
-`analyze` 接收一个条件的结果行，并不替代采集完整性审计。
-
-这些统计依赖任务可交换性，sign-flip 还依赖零假设下差值符号对称。
-便利选题、很少的非零题、未盲化和事后指标修订使这些数值只能作探索性敏感性分析。
-Bootstrap 区间和离散精确检验并不保证一一对应。p 值不是“模型没有差异的概率”，
-未显著也不是等效性证明。多指标多分组不能挑出最小 p 值宣传。
-
-样本量应围绕最小有意义差异、任务内相关与失败率做配对/聚类模拟。
-作为量级示例，独立两比例近似、双侧 α=.05、80% power、20% 对 35%，约需每组
-138 个独立观测；这不是本项目配对设计的推荐样本量，更不是把同一题重复 138 次。
-
-## 6. 复现与公开边界
-
-公开合成题、输入、受控设置、顺序、全部有效/无效试次、指标版本、程序、修订记录和
-环境指纹。用户私有历史只发布许可范围内的汇总；它不能获得与公开原始数据同等的
-可复算性。原始日志可能含凭据和宿主上下文，默认留在被忽略的私有目录。
-先字段白名单，再替换路径，再检查内容；正则扫密钥只是最后一道检查。
-
-## 依据与采用方式
-
-- [HELM, Liang et al., 2023](https://arxiv.org/abs/2211.09110)：在统一情境下同时测量多种指标并公开覆盖缺口；本项目因此将行为、质量与成本分开。
-- [Measuring what Matters, Bean et al., 2025](https://arxiv.org/abs/2511.04703)：29 位专家审查 445 个 LLM benchmark，指出构念、任务和分数之间的有效性问题；本项目因此把“Python 候选”与“所有编程”明确区分。
-- [AI Agents That Matter, Kapoor et al., 2024](https://arxiv.org/abs/2407.01502)：讨论成本、保留集和复现不足；本项目避免用更多验证或单个准确率宣布胜负。
-- [Dror et al., ACL 2018](https://aclanthology.org/P18-1128/)：检验选择依赖任务、实验设置和测量方式；本项目按题配对，保留假设说明。
-- [OpenAI evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices)：强调具体场景、清晰评分规则与人工校准；本项目把独立标注列为尚缺的证据。
-- [Inspect logs](https://inspect.aisi.org.uk/eval-logs.html)：记录配置、试次、状态和用量；本项目同样把日志完整性纳入有效性判断。
-
-这些文献支持方法选择，不是 GPT-6 更爱写代码的外部实验证据。链接核查于 2026-09-10。
+These sources guide the design; they are not evidence for the target model comparison.

@@ -8,7 +8,7 @@ difference that would matter to a user.
 Include:
 
 1. A protocol and pre-collection commit/hash, primary metric, controls and stopping rule.
-2. Synthetic or explicitly licensed prompts, fixtures and held-out task families.
+2. Public, explicitly licensed benchmark prompts and held-out task families.
 3. Model/configuration/tool provenance and known inputs you could not equalize.
 4. All attempts and failures; no selected successes or hidden post-hoc task changes.
 5. A reproducible analysis with task-level dependence and uncertainty addressed.
@@ -21,7 +21,7 @@ need versioned definitions and examples of positives, negatives and ambiguous
 cases. Preserve old labels when correcting them, with an explanation of what changed.
 
 Run `python3 -m unittest discover -s tests -v` and
-`python3 studies/code-propensity-2026-09/reproduce.py --check` before proposing a change.
+`python3 studies/standard-benchmarks/verify.py` before proposing a change.
 Tests must not make paid model calls or execute contributed model-generated code
 on the CI host. New execution adapters should reuse mature sandbox infrastructure.
 

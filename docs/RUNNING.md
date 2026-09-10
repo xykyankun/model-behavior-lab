@@ -1,4 +1,4 @@
-# Running trusted synthetic trials
+# Running public benchmark trials
 
 The analysis commands run offline with Python 3.9+. The CLI runner supports POSIX
 and was smoke-tested with Codex CLI 0.153.4 on macOS. No other CLI version is
@@ -13,11 +13,12 @@ or invalid record, never an inferred “no code” result.
 6. Independently inspect full local logs for unexpected instructions, tool failures, scope changes and privacy before producing any public export.
 
 ```bash
-python3 -m behavior_lab plan studies/code-propensity-2026-09/replication-spec.json private-runs/plan.json
+python3 -m behavior_lab fetch private-runs/cache
+python3 -m behavior_lab benchmark-plan private-runs/cache private-runs/plan.json --models gpt-5.6-sol gpt-6-astra --per-source 1
 python3 -m behavior_lab run private-runs/plan.json private-runs/results --max-runs 1
-# Continue up to 47 not-yet-attempted trials, after the infrastructure check:
-python3 -m behavior_lab run private-runs/plan.json private-runs/results --max-runs 47
-python3 -m behavior_lab analyze private-runs/results --condition default --models gpt-5.6-sol gpt-6-astra
+# Continue up to 23 not-yet-attempted trials, after the infrastructure check:
+python3 -m behavior_lab run private-runs/plan.json private-runs/results --max-runs 23
+python3 -m behavior_lab analyze private-runs/results --condition neutral --models gpt-5.6-sol gpt-6-astra
 ```
 
 The plan embeds all fixtures, model identifiers, conditions and order. File names
@@ -36,9 +37,9 @@ remote inference request was cancelled. Stop at an account limit and report the
 incomplete study. The runner does not buy credits, reset limits or alter default models.
 
 Logs in `private-runs/` are git-ignored, but ignoring is not access control. Outputs
-include raw synthetic tool inputs and private host metadata. Do not commit them
-wholesale. There is no automatic public-export command: the included study was
-allowlisted and reviewed separately. Full raw rollout files remain in Codex's own
+include benchmark tool inputs and private host metadata. Do not commit them
+wholesale. There is no automatic public-export command. Any result export must use an
+explicit field allowlist and be reviewed before publication. Full raw rollout files remain in Codex's own
 session storage; the runner only resolves its exact trial thread via the read-only
 state database. It never scans unrelated conversations.
 
