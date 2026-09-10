@@ -12,10 +12,11 @@ from behavior_lab.benchmarks import BASE_INSTRUCTIONS, FORMATS, POLICIES, load_c
 from behavior_lab.protocol import load_plan
 
 
-def verify(cache=None):
-    plan = load_plan(ROOT / "protocol.json")
+def verify(cache=None, filename="protocol.json", per_source=1):
+    plan = load_plan(ROOT / filename)
     spec = plan["spec"]
-    assert len(spec["cases"]) == 4 and len(plan["jobs"]) == 24
+    assert len(spec["cases"]) == 4 * per_source and len(plan["jobs"]) == 24 * per_source
+    assert spec["sampling"]["per_source"] == per_source
     assert spec["models"] == ["gpt-5.6-sol", "gpt-6-astra"]
     assert spec["repeats"] == 1
     assert {c["id"] for c in spec["conditions"]} == set(POLICIES)
@@ -31,7 +32,7 @@ def verify(cache=None):
             path = ROOT.parents[1] / "third_party" / source["file"]
             assert hashlib.sha256(path.read_bytes()).hexdigest() == source["sha256"]
     if cache:
-        expected = load_cases(cache, 1, spec["seed"])
+        expected = load_cases(cache, per_source, spec["seed"])
         for case in expected:
             case["prompt"] += "\n\nReturn the final answer on the last line as FINAL: <answer>. " + FORMATS[case["answer_kind"]]
         assert expected == spec["cases"], "Selected examples differ from pinned upstream sources"
@@ -48,4 +49,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache")
     args = parser.parse_args()
-    print(json.dumps(verify(args.cache), indent=2))
+    pilot = verify(args.cache)
+    main = verify(args.cache, "main-protocol.json", 6)
+    pilot_ids = {c["id"] for c in load_plan(ROOT / "protocol.json")["spec"]["cases"]}
+    main_ids = {c["id"] for c in load_plan(ROOT / "main-protocol.json")["spec"]["cases"]}
+    assert not pilot_ids & main_ids, "Pilot and main samples must not overlap"
+    print(json.dumps({"pilot": pilot, "main": main}, indent=2))
